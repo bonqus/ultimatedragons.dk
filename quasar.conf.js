@@ -99,7 +99,7 @@ cfg.module.rules.push({
       https: false,
       port: 8080,
       open: true, // opens browser window automatically
-      host: "localhost.ultimatedragon.dk"
+      host: "localhost.ultimatedragons.dk"
     },
 
     // animations: 'all', // --- includes all animations
