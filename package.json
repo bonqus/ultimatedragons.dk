@@ -10,7 +10,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ./",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "push-dir --allow-unclean --force --dir=dist/spa --remote=gh-pages --branch=master"
+    "deploy": "push-dir --dir=dist/spa --remote=origin --branch=master"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
