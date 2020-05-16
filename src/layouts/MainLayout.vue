@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Dragons Homepage, test 5
+          Dragons Homepage, test 6
         </q-toolbar-title>
 
       </q-toolbar>
