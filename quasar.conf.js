@@ -13,7 +13,7 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
-      
+
       'i18n',
       'axios',
     ],
@@ -98,7 +98,8 @@ cfg.module.rules.push({
     devServer: {
       https: false,
       port: 8080,
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
+      host: "localhost.ultimatedragon.dk"
     },
 
     // animations: 'all', // --- includes all animations
