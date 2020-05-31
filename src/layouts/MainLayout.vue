@@ -38,7 +38,7 @@
     <q-drawer v-model="drawerLeft" content-class="bg-black">
       <q-scroll-area class="fit">
         <q-list padding>
-          <q-item
+          <q-item dark
             v-for="(link, i) in links"
             :key="i"
             clickable
@@ -46,7 +46,7 @@
             :to="link.to"
           >
             <q-item-section avatar>
-              <q-icon name="link.icon" />
+              <q-icon :name="link.icon" />
             </q-item-section>
 
             <q-item-section>
@@ -77,9 +77,9 @@ export default {
         { value: "da-DK", label: "Dansk" }
       ],
       links: [
-        { icon: "accessibility", label: "Teams", to: "/teams" },
-        { icon: "accessibility", label: "Shop", to: "/shop" },
-        { icon: "accessibility", label: "Contact", to: "/contact" }
+        { icon: "group", label: "Teams", to: "/teams" },
+        { icon: "store", label: "Shop", to: "/shop" },
+        { icon: "alternate_email", label: "Contact", to: "/contact" }
       ]
     };
   },
