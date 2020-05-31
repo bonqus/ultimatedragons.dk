@@ -1,0 +1,152 @@
+<template>
+  <q-page class="row bg-black text-white ">
+    <q-scroll-area class="q-px-md col" dark>
+      <div class="row">
+        <div class="q-px-md offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
+          <h2 class="q-mb-md">{{ $t("Membership") }}</h2>
+          <q-markup-table dark flat bordered separator="none">
+            <tbody>
+              <tr>
+                <td class="text-left">{{ $t("1 season") }}</td>
+                <td class="text-right">{{ $n(300, "currency") }}</td>
+              </tr>
+              <tr>
+                <td class="text-left">{{ $t("2 seasons (+ disc)*") }}</td>
+                <td class="text-right">{{ $n(500, "currency") }}</td>
+              </tr>
+            </tbody>
+          </q-markup-table>
+
+          <span class="text-caption">
+            {{
+              $t(
+                "* Only newly registered members recieve a disc."
+              )
+            }}
+          </span>
+
+          <h2 class="q-mb-md">{{ $t("Spillertøj") }}</h2>
+          <q-markup-table dark flat bordered separator="none">
+            <tbody>
+              <tr>
+                <td class="text-left">{{ $t("Short Sleeve Jersey") }}</td>
+                <td class="text-right">{{ $n(170, "currency") }}</td>
+              </tr>
+              <tr>
+                <td class="text-left">{{ $t("Long Sleeve Jersey") }}</td>
+                <td class="text-right">{{ $n(190, "currency") }}</td>
+              </tr>
+              <tr>
+                <td class="text-left">{{ $t("Tanktop Jersey") }}</td>
+                <td class="text-right">{{ $n(150, "currency") }}</td>
+              </tr>
+              <tr>
+                <td class="text-left">{{ $t("Shorts") }}</td>
+                <td class="text-right">{{ $n(140, "currency") }}</td>
+              </tr>
+            </tbody>
+          </q-markup-table>
+          <h2 class="q-mb-md">{{ $t("Discs") }}</h2>
+          <q-markup-table dark flat bordered separator="none">
+            <tbody>
+              <tr v-for="(disc, i) in discs" :key="i" @click="show_disc(disc)">
+                <td class="text-left">{{ $t(disc.label) }}</td>
+                <td class="text-right">{{ $n(65, "currency") }}</td>
+              </tr>
+            </tbody>
+          </q-markup-table>
+
+          <h2 class="q-mb-md">{{ $t("Payment options") }}</h2>
+          <q-field
+            borderless
+            :label="$t('Account_number')"
+            stack-label
+            dark
+            class="col-auto"
+          >
+            <template v-slot:control>
+              <div class="self-center full-width no-outline" tabindex="0">
+                {{ account_number }}
+              </div>
+            </template>
+
+            <template v-slot:append>
+              <q-btn
+                no-caps
+                icon-right="file_copy"
+                :label="$t('Copy_to_clipholder')"
+                @click="copy(account_number, 'Account_number')"
+              />
+            </template>
+          </q-field>
+
+          <q-field
+            borderless
+            :label="$t('Registration_number')"
+            stack-label
+            dark
+            class="col-auto"
+            mask="(###) ### - ####"
+          >
+            <template v-slot:control>
+              <div class="self-center full-width no-outline" tabindex="1">
+                {{ registration_number }}
+              </div>
+            </template>
+            <template v-slot:append>
+              <q-btn
+                no-caps
+                icon-right="file_copy"
+                :label="$t('Copy_to_clipholder')"
+                @click="copy(registration_number, 'Registration_number')"
+              />
+            </template>
+          </q-field>
+          <span class="text-caption">
+            {{ $t("Ved bankoverførsler skal betalers fulde navn noteres.") }}
+          </span>
+        </div>
+      </div>
+    </q-scroll-area>
+    <q-dialog v-model="disc_dialog">
+      <q-img :src="disc.src" />
+    </q-dialog>
+  </q-page>
+</template>
+
+<script>
+import { copyToClipboard } from "quasar";
+export default {
+  name: "PageShop",
+  data() {
+    return {
+      account_number: 4387858569,
+      registration_number: 2253,
+      disc_dialog: false,
+      discs: [
+        { label: "Black", src: "statics/discs/black.jpg" },
+        { label: "Grey", src: "statics/discs/grey.jpg" },
+        { label: "Red", src: "statics/discs/red.jpg" },
+        { label: "Yellow", src: "statics/discs/yellow.jpg" }
+      ],
+      disc: { label: "Black", src: "~assets/discs/black.jpg" }
+    };
+  },
+  methods: {
+    show_disc(disc) {
+      this.disc = disc;
+      this.disc_dialog = true;
+    },
+    copy(n, text) {
+      copyToClipboard(n)
+        .then(() => {
+          this.$q.notify(this.$t(text) + " " + this.$t("copied_to_clipboard"));
+        })
+        .catch(() => {
+          console.log("nope");
+        });
+    }
+  }
+};
+</script>
+'
