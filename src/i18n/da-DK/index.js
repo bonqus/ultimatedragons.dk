@@ -17,12 +17,25 @@ export default {
   Red: "Rød",
   Yellow: "Gul",
   "1 season": "1 sæson",
-  "2 seasons (+ disc)*": "2 sæsoner (+ disc)*",
+  "2 seasons": "2 sæsoner",
+  "2 seasons incl. disc": "2 sæsoner inkl. disc",
   "Board of Directors": "Bestyrelsen",
   Chairman: "Formand",
   "Board Member": "Bestyrelsesmedlem",
   Alternate: "Suppleant",
   Treasurer: "Kasserer",
   "Vice Chairman": "Næstformand",
-  "* Only newly registered members recieve a disc.": "* Kun nyindmeldte medlemmer modtager en disc"
+  "Only newly registered members recieve a disc.":
+    "Kun nyindmeldte medlemmer modtager en disc",
+  Color: "Farve",
+  Members: "Medlemmer",
+  Price: "Pris",
+  "Players uniform": "Spillertøj",
+  "The price of the players uniform is indicative and not not fixed.":
+  "Prisen på spillertøj er ikke fast men vejledende.",
+  "Payment options": "Betalingsmuligheder",
+  "For bank transfers, the payer's full name must be noted.":"Ved bankoverførsler skal betalers fulde navn noteres.",
+  Tuesday: "Tirsdag",
+  Thursday: "Torsdag",
+  Practice: "Træning"
 };

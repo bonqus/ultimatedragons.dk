@@ -17,12 +17,24 @@ export default {
   Red: "Red",
   Yellow: "Yellow",
   "1 season": "1 season",
-  "2 seasons (+ disc)*": "2 seasons (+ disc)*",
+  "2 seasons": "2 seasons",
+  "2 seasons incl. disc": "2 seasons incl. disc",
   "Board of Directors": "Board of Directors",
   Chairman: "Chairman",
   "Board Member": "Board Member",
   Alternate: "Alternate",
   Treasurer: "Treasurer",
   "Vice Chairman": "Vice Chairman",
-  "* Only newly registered members recieve a disc.": "* Only newly registered members recieve a disc."
+  "Only newly registered members recieve a disc.":
+    "Only newly registered members recieve a disc.",
+  Color: "Color",
+  Members: "Members",
+  Price: "Price",
+  "Players uniform": "Players uniform",
+  "The price of the players uniform is indicative and not not fixed.":"The price of the players uniform is indicative and not not fixed.",
+  "Payment options": "Payment options",
+  "For bank transfers, the payer's full name must be noted.":"Ved bankoverførsler skal betalers fulde navn noteres.",
+  Tuesday: "Tuesday",
+  Thursday: "Thursday",
+  Practice: "Practice"
 };

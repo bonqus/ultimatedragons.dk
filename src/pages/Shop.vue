@@ -11,47 +11,66 @@
                 <td class="text-right">{{ $n(300, "currency") }}</td>
               </tr>
               <tr>
-                <td class="text-left">{{ $t("2 seasons (+ disc)*") }}</td>
+                <td class="text-left">{{ $t("2 seasons") }}</td>
+                <td class="text-right">{{ $n(500, "currency") }}</td>
+              </tr>
+              <tr>
+                <td class="text-left">* {{ $t("2 seasons incl. disc") }} *</td>
                 <td class="text-right">{{ $n(500, "currency") }}</td>
               </tr>
             </tbody>
           </q-markup-table>
 
           <span class="text-caption">
-            {{
+            * {{
               $t(
-                "* Only newly registered members recieve a disc."
+                "Only newly registered members recieve a disc."
               )
-            }}
+            }} *
           </span>
 
-          <h2 class="q-mb-md">{{ $t("Spillertøj") }}</h2>
+          <h2 class="q-mb-md">{{ $t("Players uniform") }}</h2>
           <q-markup-table dark flat bordered separator="none">
             <tbody>
               <tr>
                 <td class="text-left">{{ $t("Short Sleeve Jersey") }}</td>
-                <td class="text-right">{{ $n(170, "currency") }}</td>
+                <td class="text-right">~{{ $n(170, "currency") }}</td>
               </tr>
               <tr>
                 <td class="text-left">{{ $t("Long Sleeve Jersey") }}</td>
-                <td class="text-right">{{ $n(190, "currency") }}</td>
+                <td class="text-right">~{{ $n(190, "currency") }}</td>
               </tr>
               <tr>
                 <td class="text-left">{{ $t("Tanktop Jersey") }}</td>
-                <td class="text-right">{{ $n(150, "currency") }}</td>
+                <td class="text-right">~{{ $n(150, "currency") }}</td>
               </tr>
               <tr>
                 <td class="text-left">{{ $t("Shorts") }}</td>
-                <td class="text-right">{{ $n(140, "currency") }}</td>
+                <td class="text-right">~{{ $n(140, "currency") }}</td>
               </tr>
             </tbody>
           </q-markup-table>
+          <span class="text-caption">
+            {{
+                $t(
+                  "The price of the players uniform is indicative and not not fixed."
+                )
+              }}
+          </span>
           <h2 class="q-mb-md">{{ $t("Discs") }}</h2>
           <q-markup-table dark flat bordered separator="none">
+            <thead>
+              <tr>
+                <th class="text-left">{{ $t("Color")}}</th>
+                <th class="text-right">{{ $t("Members") }}</th>
+                <th class="text-right">{{ $t("Price") }}</th>
+              </tr>
+            </thead>
             <tbody>
               <tr v-for="(disc, i) in discs" :key="i" @click="show_disc(disc)">
                 <td class="text-left">{{ $t(disc.label) }}</td>
-                <td class="text-right">{{ $n(65, "currency") }}</td>
+                <td class="text-right">{{ $n(60, "currency") }}</td>
+                <td class="text-right">{{ $n(80, "currency") }}</td>
               </tr>
             </tbody>
           </q-markup-table>
@@ -103,7 +122,7 @@
             </template>
           </q-field>
           <span class="text-caption">
-            {{ $t("Ved bankoverførsler skal betalers fulde navn noteres.") }}
+            {{ $t("For bank transfers, the payer's full name must be noted.") }}
           </span>
         </div>
       </div>
@@ -149,4 +168,3 @@ export default {
   }
 };
 </script>
-'
