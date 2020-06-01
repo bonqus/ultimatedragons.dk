@@ -36,5 +36,6 @@ export default {
   "For bank transfers, the payer's full name must be noted.":"Ved bankoverførsler skal betalers fulde navn noteres.",
   Tuesday: "Tuesday",
   Thursday: "Thursday",
-  Practice: "Practice"
+  Practice: "Practice",
+  "All mixed practice has been canceled due to the coronavirus outbreak.": "All mixed practice has been canceled due to the coronavirus outbreak."
 };

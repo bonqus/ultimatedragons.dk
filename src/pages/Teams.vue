@@ -39,8 +39,11 @@
 
           <h2 class="q-mb-md">{{ $t("Mixed") }}</h2>
           <span>
-            At the moment there are no mixed practices due to the corona virus
-            outbreak.
+            {{
+              $t(
+                "All mixed practice has been canceled due to the coronavirus outbreak."
+              )
+            }}
           </span>
         </div>
       </div>
