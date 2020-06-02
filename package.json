@@ -1,8 +1,8 @@
 {
   "name": "ultimatedragons.dk",
   "version": "0.0.1",
-  "description": "The homepage of Ultimate Dragons",
-  "productName": "Ultimate Dragons Homepage",
+  "description": "The Dragons' Den",
+  "productName": "Ultimate Dragons",
   "cordovaId": "ultimatedragons.dk.app",
   "capacitorId": "",
   "author": "bonqus <mathias_b2@hotmail.com>",
