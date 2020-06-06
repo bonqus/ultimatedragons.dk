@@ -48,16 +48,22 @@ export default {
         "Sophie Jelstrup",
         "Tekla Marie Emborg",
         "Thomas Robert Träff",
-        "Thomas Siggaard Andersen"
+        "Thomas Siggaard Andersen",
+        "Casper Foltmar Gammelgaard",
+        "Maria Marker",
+        "Christine Albrechtsen",
+        "Rikke Brouw Hyldahl"
       ]
     };
   },
   computed: {
     membersfiltered() {
       if (this.search === "") {
-        return this.members;
+        return [...this.members].sort();
       }
-      return this.members.filter(m => m.toLowerCase().includes(this.search.toLowerCase()));
+      return [...this.members.filter(m =>
+        m.toLowerCase().includes(this.search.toLowerCase())
+      )].sort();
     }
   }
 };
