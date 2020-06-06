@@ -7,12 +7,12 @@
           <h3 class="q-mb-md q-mt-none">{{ $t("Practice") }}</h3>
           <q-markup-table dark flat bordered separator="none">
             <tbody>
-              <tr>
+              <tr @click="map = true">
                 <td class="text-left">Fælledparken</td>
                 <td class="text-left">{{ $t("Tuesday") }}</td>
                 <td class="text-right">17:30 - 19:30</td>
               </tr>
-              <tr>
+              <tr @click="map = true">
                 <td class="text-left">Fælledparken</td>
                 <td class="text-left">{{ $t("Thursday") }}</td>
                 <td class="text-right">17:30 - 19:30</td>
@@ -24,12 +24,12 @@
           <h3 class="q-mb-md q-mt-none">{{ $t("Practice") }}</h3>
           <q-markup-table dark flat bordered separator="none">
             <tbody>
-              <tr>
+              <tr @click="map = true">
                 <td class="text-left">Fælledparken</td>
                 <td class="text-left">{{ $t("Tuesday") }}</td>
                 <td class="text-right">17:00 - 19:00</td>
               </tr>
-              <tr>
+              <tr @click="map = true">
                 <td class="text-left">Fælledparken</td>
                 <td class="text-left">{{ $t("Thursday") }}</td>
                 <td class="text-right">17:00 - 19:00</td>
@@ -48,5 +48,37 @@
         </div>
       </div>
     </q-scroll-area>
+    <q-dialog v-model="map">
+      <q-card
+        style="
+        height: 500px;
+        width: 500px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);"
+      >
+        <iframe
+          width="100%"
+          height="100%"
+          frameborder="0"
+          scrolling="no"
+          style="border:0"
+          marginheight="0"
+          marginwidth="0"
+          src="https://www.google.com/maps/embed/v1/place?q=55.700525%2C%2012.568412&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ"
+          allowfullscreen
+        ></iframe>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
+<script>
+export default {
+  name: "TeamsPage",
+  data() {
+    return {
+      map: false
+    };
+  }
+};
+</script>
+>
