@@ -22,11 +22,7 @@
           </q-markup-table>
 
           <span class="text-caption">
-            * {{
-              $t(
-                "Only newly registered members recieve a disc."
-              )
-            }} *
+            * {{ $t("Only newly registered members recieve a disc.") }} *
           </span>
 
           <h2 class="q-mb-md">{{ $t("Players uniform") }}</h2>
@@ -52,16 +48,16 @@
           </q-markup-table>
           <span class="text-caption">
             {{
-                $t(
-                  "The price of the players uniform is indicative and not not fixed."
-                )
-              }}
+              $t(
+                "The price of the players uniform is indicative and not fixed."
+              )
+            }}
           </span>
           <h2 class="q-mb-md">{{ $t("Discs") }}</h2>
           <q-markup-table dark flat bordered separator="none">
             <thead>
               <tr>
-                <th class="text-left">{{ $t("Color")}}</th>
+                <th class="text-left">{{ $t("Color") }}</th>
                 <th class="text-right">{{ $t("Members") }}</th>
                 <th class="text-right">{{ $t("Price") }}</th>
               </tr>

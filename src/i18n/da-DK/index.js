@@ -31,7 +31,7 @@ export default {
   Members: "Medlemmer",
   Price: "Pris",
   "Players uniform": "Spillertøj",
-  "The price of the players uniform is indicative and not not fixed.":
+  "The price of the players uniform is indicative and not fixed.":
   "Prisen på spillertøj er ikke fast men vejledende.",
   "Payment options": "Betalingsmuligheder",
   "For bank transfers, the payer's full name must be noted.":"Ved bankoverførsler skal betalers fulde navn noteres.",

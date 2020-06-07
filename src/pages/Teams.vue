@@ -50,23 +50,34 @@
     </q-scroll-area>
     <q-dialog v-model="map">
       <q-card
+        dark
+        class="column"
         style="
         height: 500px;
         width: 500px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);"
+        "
       >
-        <iframe
-          width="100%"
-          height="100%"
-          frameborder="0"
-          scrolling="no"
-          style="border:0"
-          marginheight="0"
-          marginwidth="0"
-          src="https://www.google.com/maps/embed/v1/place?q=55.700525%2C%2012.568412&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ"
-          allowfullscreen
-        ></iframe>
+        <q-card-section
+          class="col q-pa-none"
+          style="
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);"
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+            style="border:0"
+            marginheight="0"
+            marginwidth="0"
+            src="https://www.google.com/maps/embed/v1/place?q=55.700525%2C%2012.568412&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ"
+            allowfullscreen
+          ></iframe>
+        </q-card-section>
+        <q-card-actions align="right">
+          <q-btn flat :label="$t('OK')" v-close-popup />
+        </q-card-actions>
       </q-card>
     </q-dialog>
   </q-page>
@@ -81,4 +92,3 @@ export default {
   }
 };
 </script>
->

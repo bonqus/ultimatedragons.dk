@@ -6,29 +6,13 @@
           <h2 class="q-mb-md">{{ $t("Board of Directors") }}</h2>
           <q-markup-table dark flat bordered separator="none">
             <tbody>
-              <tr>
-                <td class="text-left">{{ $t("Chairman") }}</td>
-                <td class="text-right">Benjamin Toppenberg Lazar</td>
-              </tr>
-              <tr>
-                <td class="text-left">{{ $t("Vice Chairman") }}</td>
-                <td class="text-right">Kirsten Hell Knudsen</td>
-              </tr>
-              <tr>
-                <td class="text-left">{{ $t("Treasurer") }}</td>
-                <td class="text-right">Mathias Bohn Rassmusen</td>
-              </tr>
-              <tr>
-                <td class="text-left">{{ $t("Board Member") }}</td>
-                <td class="text-right">Laura Toppenberg Lazar</td>
-              </tr>
-              <tr>
-                <td class="text-left">{{ $t("Board Member") }}</td>
-                <td class="text-right">Anita Pedersen</td>
-              </tr>
-              <tr>
-                <td class="text-left">{{ $t("Alternate") }}</td>
-                <td class="text-right">Søren Alstrup</td>
+              <tr
+                v-for="member in boardMembers"
+                :key="member.name"
+                @click="contact(member)"
+              >
+                <td class="text-left">{{ $t(member.role) }}</td>
+                <td class="text-right">{{ member.name }}</td>
               </tr>
             </tbody>
           </q-markup-table>
@@ -37,3 +21,53 @@
     </q-scroll-area>
   </q-page>
 </template>
+<script>
+export default {
+  name: "ContactPage",
+  data() {
+    return {
+      boardMembers: [
+        {
+          name: "Benjamin Toppenberg Lazar",
+          role: "Chairman",
+          email: "ultimatedragonsdenmark+chairman@gmail.com"
+        },
+        {
+          name: "Kirsten Hell Knudsen",
+          role: "Vice Chairman",
+          email: "ultimatedragonsdenmark+vicechairman@gmail.com"
+        },
+        {
+          name: "Mathias Bohn Rassmusen",
+          role: "Treasurer",
+          email: "ultimatedragonsdenmark+treasurer@gmail.com"
+        },
+        {
+          name: "Laura Toppenberg Lazar",
+          role: "Board Member",
+          email: "ultimatedragonsdenmark@gmail.com"
+        },
+        {
+          name: "Anita Pedersen",
+          role: "Board Member",
+          email: "ultimatedragonsdenmark@gmail.com"
+        },
+        {
+          name: "Søren Alstrup",
+          role: "Alternate",
+          email: "ultimatedragonsdenmark@gmail.com"
+        }
+      ]
+    };
+  },
+  methods: {
+    contact(member) {
+      this.$q.dialog({
+        dark: true,
+        title: member.name,
+        message: member.email
+      });
+    }
+  }
+};
+</script>
