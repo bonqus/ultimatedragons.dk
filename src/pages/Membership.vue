@@ -56,7 +56,8 @@ export default {
         "Casper Foltmar Gammelgaard",
         "Maria Marker",
         "Christine Albrechtsen",
-        "Rikke Brouw Hyldahl"
+        "Rikke Brouw Hyldahl",
+        "Thomas Ryde",
       ]
     };
   },

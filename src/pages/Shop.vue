@@ -101,7 +101,6 @@
             stack-label
             dark
             class="col-auto"
-            mask="(###) ### - ####"
           >
             <template v-slot:control>
               <div class="self-center full-width no-outline" tabindex="1">
