@@ -2,7 +2,7 @@
   <q-page class="row bg-black text-white ">
     <q-scroll-area class="q-px-md col" dark>
       <div class="row">
-        <div class="q-px-md offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
+        <div class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
           <h2 class="q-mb-md">{{ $t("Open") }}</h2>
           <h3 class="q-mb-md q-mt-none">{{ $t("Practice") }}</h3>
           <q-markup-table dark flat bordered separator="none">

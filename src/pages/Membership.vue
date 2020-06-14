@@ -2,7 +2,7 @@
   <q-page class="row bg-black text-white ">
     <q-scroll-area class="q-px-md col" dark>
       <div class="row">
-        <div class="q-px-md offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
+        <div class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
           <h2>{{ $t("Members") }}</h2>
           <q-input class="q-mb-md" dark v-model="search" filled type="search">
             <template v-slot:append>
@@ -58,6 +58,10 @@ export default {
         "Christine Albrechtsen",
         "Rikke Brouw Hyldahl",
         "Thomas Ryde",
+        "Sofie Bejder",
+        "Anita Pedersen",
+        "Johan Aleksander Rindmar",
+        "Esben Larsen Rasmussen"
       ]
     };
   },
