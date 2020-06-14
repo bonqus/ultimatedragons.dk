@@ -9,7 +9,7 @@
             <tbody>
               <tr @click="map = true">
                 <td class="text-left">Fælledparken</td>
-                <td class="text-left">{{ $t("Tuesday") }}</td>
+                <td class="text-left">{{ $t("Monday") }}</td>
                 <td class="text-right">17:30 - 19:30</td>
               </tr>
               <tr @click="map = true">
@@ -38,13 +38,16 @@
           </q-markup-table>
 
           <h2 class="q-mb-md">{{ $t("Mixed") }}</h2>
-          <span>
-            {{
-              $t(
-                "All mixed practice has been canceled due to the coronavirus outbreak."
-              )
-            }}
-          </span>
+          <h3 class="q-mb-md q-mt-none">{{ $t("Practice") }}</h3>
+          <q-markup-table dark flat bordered separator="none">
+            <tbody>
+              <tr @click="map = true">
+                <td class="text-left">Fælledparken</td>
+                <td class="text-left">{{ $t("Thursday") }}</td>
+                <td class="text-right">17:30 - 19:30</td>
+              </tr>
+            </tbody>
+          </q-markup-table>
         </div>
       </div>
     </q-scroll-area>

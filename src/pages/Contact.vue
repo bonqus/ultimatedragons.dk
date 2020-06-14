@@ -2,7 +2,9 @@
   <q-page class="row bg-black text-white ">
     <q-scroll-area class="q-px-md col" dark>
       <div class="row">
-        <div class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
+        <div
+          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
+        >
           <h2 class="q-mb-md">{{ $t("Board of Directors") }}</h2>
           <q-markup-table dark flat bordered separator="none">
             <tbody>
@@ -16,6 +18,24 @@
               </tr>
             </tbody>
           </q-markup-table>
+          <div class="q-pa-md q-gutter-md row justify-center">
+            <q-btn
+              round
+              type="a"
+              href="https://www.facebook.com/UltimateDragons"
+              target="__blank"
+              icon="ion-logo-facebook"
+              to=""
+            />
+            <q-btn
+              round
+              type="a"
+              href="https://www.instagram.com/ultimatedragons"
+              target="__blank"
+              icon="ion-logo-instagram"
+              to=""
+            />
+          </div>
         </div>
       </div>
     </q-scroll-area>
