@@ -2,11 +2,7 @@
   <q-layout view="hHh Lpr lff">
     <q-header elevated>
       <q-toolbar class="text-white row bg-black">
-        <q-tabs
-          align="center"
-          class="offset-1 col-10"
-          v-if="$q.screen.gt.xs"
-        >
+        <q-tabs align="center" class="offset-1 col-10" v-if="$q.screen.gt.xs">
           <q-route-tab
             v-for="(link, i) in links"
             :key="i"
@@ -27,7 +23,6 @@
         <q-space />
         <q-select
           v-model="lang"
-          dark
           :options="langOptions"
           borderless
           map-options
@@ -38,7 +33,7 @@
     <q-drawer v-model="drawerLeft" content-class="bg-black">
       <q-scroll-area class="fit">
         <q-list padding>
-          <q-item dark
+          <q-item
             v-for="(link, i) in links"
             :key="i"
             clickable

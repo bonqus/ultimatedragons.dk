@@ -9,14 +9,15 @@
              allowfullscreen>
              </iframe>
              </div> -->
-        <div class="col-5 column">
-          <q-img src="~assets/dragons-logo.png" />
-          <q-btn
-            flat
-            class="text-center text-grey"
-            label="Enter the dragon"
-            to="/teams"
+        <div class="col-xs-11 col-4 column flex-center text-center">
+          <h1 class="text-grey">
+            {{ $t("Ultimate frisbee in the heart of Copenhagen") }}
+          </h1>
+          <q-img
+            @click="$router.push('teams')"
+            src="~assets/dragons-logo.png"
           />
+          <q-btn flat class="text-grey" label="Enter the dragon" to="/teams" />
 
           <!-- <q-video
                src="https://www.youtu.be/XGnnYiwK4Dw?rel=0"
@@ -28,6 +29,14 @@
                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                allowfullscreen
                ></iframe> -->
+
+          <span class="text-grey q-mb-md">
+            {{
+              $t(
+                "The most social ultimate frisbee club in Denmark, with room for all levels of experience."
+              )
+            }}
+          </span>
         </div>
       </q-page>
     </q-page-container>

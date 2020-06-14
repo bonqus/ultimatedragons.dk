@@ -37,6 +37,9 @@ export default {
   "For bank transfers, the payer's full name must be noted.":"Ved bankoverførsler skal betalers fulde navn noteres.",
   Tuesday: "Tirsdag",
   Thursday: "Torsdag",
+  Monday: "Mandag",
   Practice: "Træning",
-  "All mixed practice has been canceled due to the coronavirus outbreak.": "Al mixtræning er aflyst pga. coronavirus udbrudet."
+  "All mixed practice has been canceled due to the coronavirus outbreak.": "Al mixtræning er aflyst pga. coronavirus udbrudet.",
+  "The most social ultimate frisbee club in Denmark, with room for all levels of experience.": "Den mest sociale ultimate frisbee klub i Danmark, med plads til alle niveuer.",
+  "Ultimate frisbee in the heart of Copenhagen": "Ultimate frisbee i hjertet af København"
 };
