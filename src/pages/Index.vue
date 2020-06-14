@@ -9,7 +9,7 @@
              allowfullscreen>
              </iframe>
              </div> -->
-        <div class="col-xs-11 col-4 column flex-center text-center">
+        <div class="col-xs-11 col-sm-8 col-md-5 col-lg-4 column flex-center text-center">
           <h1 class="text-grey">
             {{ $t("Ultimate frisbee in the heart of Copenhagen") }}
           </h1>
