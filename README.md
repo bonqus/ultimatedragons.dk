@@ -3,26 +3,15 @@ The src code of ultimatedragons.dk
 
 ## Makefile
 
+`make lint`
+*Fix all autofixable linting errors*
 -------------------------------------------------------------------------------
-
-### make lint ###
-
-Fix all autofixable linting errors
-
+`make run`
+*Run the app*
 -------------------------------------------------------------------------------
-
-### make run ###
-
-Run the app
-
+`make build`
+*Build distribution for deployment*
 -------------------------------------------------------------------------------
-
-### make build ###
-
-Build distribution for deployment
-
+`make deploy`
+*Deploy the distribution*
 -------------------------------------------------------------------------------
-
-### make deploy ###
-
-Deploy the distribution
