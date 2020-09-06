@@ -8,15 +8,15 @@
             <tbody>
               <tr>
                 <td class="text-left">{{ $t("1 season") }}</td>
-                <td class="text-right">{{ $n(300, "currency") }}</td>
+                <td class="text-right">{{ $n(350, "currency") }}</td>
               </tr>
               <tr>
                 <td class="text-left">{{ $t("2 seasons") }}</td>
-                <td class="text-right">{{ $n(500, "currency") }}</td>
+                <td class="text-right">{{ $n(600, "currency") }}</td>
               </tr>
               <tr>
                 <td class="text-left">* {{ $t("2 seasons incl. disc") }} *</td>
-                <td class="text-right">{{ $n(500, "currency") }}</td>
+                <td class="text-right">{{ $n(600, "currency") }}</td>
               </tr>
             </tbody>
           </q-markup-table>
