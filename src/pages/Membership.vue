@@ -2,8 +2,10 @@
   <q-page class="row bg-black text-white ">
     <q-scroll-area class="q-px-md col">
       <div class="row">
-        <div class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
-          <h2>{{ $t("Members") }}</h2>
+        <div
+          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
+        >
+          <h2 class="text-center">2020/2021 {{ $t("Members") }} {{ $t("Indoor") }}</h2>
           <q-input class="q-mb-md" v-model="search" filled type="search">
             <template v-slot:append>
               <q-icon name="search" />
@@ -33,35 +35,18 @@ export default {
     return {
       search: "",
       members: [
-        "Benjamin Toppenberg Lazar",
-        "Ditte Schønnemann Jørgensen",
-        "Hanne Hovmark Kristensen",
-        "Jakob Eiby",
-        "Javier Andaluz Pinedo",
-        "Jonas Hagsholm Pedersen",
-        "Karen Singers",
-        "Laura Toppenberg Lazar",
-        "Martin Jacobensen",
-        "Mathias Bohn Rasmussen",
-        "Mette Godiksen",
-        "Mind Jinnapat Indrapiromkul",
-        "Oliver Clemmensen",
-        "Peter Alexander Garnæs",
-        "Rasmus Haase",
-        "Rebecca Mole",
-        "Sophie Jelstrup",
-        "Tekla Marie Emborg",
-        "Thomas Robert Träff",
-        "Thomas Siggaard Andersen",
-        "Casper Foltmar Gammelgaard",
-        "Maria Marker",
-        "Christine Albrechtsen",
-        "Rikke Brouw Hyldahl",
-        "Thomas Ryde",
-        "Sofie Bejder",
+        "Anders Wulff Kringelbach",
         "Anita Pedersen",
-        "Johan Aleksander Rindmar",
-        "Esben Larsen Rasmussen"
+        "Casper Foltmar Gammelgaard",
+        "Christine Albrechtsen",
+        "Christoph Markus Schläpfer",
+        "Esben Larsen Rasmussen",
+        "Jeppe Qin Hansen",
+        "Maria Marker",
+        "Rikke Brouw Hyldahl",
+        "Sofie Bejder",
+        "Søren Alstrup",
+        "Thomas Ryde"
       ]
     };
   },
