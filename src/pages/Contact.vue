@@ -53,7 +53,7 @@ export default {
           email: "ultimatedragonsdenmark+chairman@gmail.com"
         },
         {
-          name: "Kirsten Hell Knudsen",
+          name: "Ditte Schønnemann Jørgensen",
           role: "Vice Chairman",
           email: "ultimatedragonsdenmark+vicechairman@gmail.com"
         },
@@ -68,12 +68,12 @@ export default {
           email: "ultimatedragonsdenmark@gmail.com"
         },
         {
-          name: "Anita Pedersen",
+          name: "Søren Alstrup",
           role: "Board Member",
           email: "ultimatedragonsdenmark@gmail.com"
         },
         {
-          name: "Søren Alstrup",
+          name: "Anita Pedersen",
           role: "Alternate",
           email: "ultimatedragonsdenmark@gmail.com"
         }
