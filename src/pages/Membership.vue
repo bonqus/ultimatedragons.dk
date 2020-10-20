@@ -49,6 +49,7 @@ export default {
         "Peter Alexander Garnæs",
         "Rikke Brouw Hyldahl",
         "Sofie Bejder",
+        "Sophie Jelstrup",
         "Søren Alstrup",
         "Thomas Ryde"
       ]
