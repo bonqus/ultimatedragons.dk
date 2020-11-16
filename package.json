@@ -13,14 +13,14 @@
     "deploy": "push-dir --dir=dist/spa --remote=origin --branch=master"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
+    "@quasar/extras": "^1.9.10",
     "axios": "^0.18.1",
     "push-dir": "^0.4.1",
-    "quasar": "^1.0.0",
+    "quasar": "^1.14.3",
     "vue-i18n": "^8.0.0"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0",
+    "@quasar/app": "^1.9.6",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",

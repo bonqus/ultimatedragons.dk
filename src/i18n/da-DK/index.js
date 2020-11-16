@@ -42,5 +42,7 @@ export default {
   "All mixed practice has been canceled due to the coronavirus outbreak.": "Al mixtræning er aflyst pga. coronavirus udbrudet.",
   "The most social ultimate frisbee club in Denmark, with room for all levels of experience.": "Den mest sociale ultimate frisbee klub i Danmark, med plads til alle niveuer.",
   "Ultimate frisbee in the heart of Copenhagen": "Ultimate frisbee i hjertet af København",
-  "Indoor": "Inde"
+  "Indoor": "Inde",
+  "Men": "Herrer",
+  "Women": "Damer"
 };
