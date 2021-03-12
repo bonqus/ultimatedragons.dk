@@ -1,6 +1,9 @@
 <template>
   <q-page class="row bg-black text-white ">
     <q-scroll-area class="q-px-md col">
+      <q-btn v-show="false" @click="sendStuff()">
+        hej
+      </q-btn>
       <div class="row">
         <div
           class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
@@ -86,6 +89,32 @@ export default {
         title: member.name,
         message: member.email
       });
+    },
+    sendStuff() {
+      // send a POST request
+      console.log("hej");
+      const GOOGLE_FORM_NAME_ID = "entry.717164993";
+      const GOOGLE_FORM_AGE_ID = "entry.452129453";
+      const GOOGLE_FORM_SEX_ID = "entry.1999305236";
+
+      const GOOGLE_FORM_ACTION_URL =
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdEyndlFX_uqiIzDk4cu-24a0VU22evl8DHR4Xmt5e4mYYLcA/formResponse";
+
+      // this.$axios({
+      //   method: "post",
+      //   url: CORS_PROXY + GOOGLE_FORM_ACTION_URL,
+      //   data: {
+      //     [GOOGLE_FORM_NAME_ID]: "lkol",
+      //     [GOOGLE_FORM_AGE_ID]: "9",
+      //     [GOOGLE_FORM_SEX_ID]: "hej"
+      //   }
+      // })
+      const formData = new FormData();
+      formData.append(GOOGLE_FORM_NAME_ID, "hej");
+      formData.append(GOOGLE_FORM_AGE_ID, "hej");
+      formData.append(GOOGLE_FORM_SEX_ID, "hej");
+
+      this.$axios.post(GOOGLE_FORM_ACTION_URL, formData);
     }
   }
 };

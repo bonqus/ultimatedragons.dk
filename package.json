@@ -13,10 +13,10 @@
     "deploy": "push-dir --dir=dist/spa --remote=origin --branch=master"
   },
   "dependencies": {
-    "@quasar/extras": "^1.9.10",
+    "@quasar/extras": "^1.9.19",
     "axios": "^0.18.1",
     "push-dir": "^0.4.1",
-    "quasar": "^1.14.3",
+    "quasar": "^1.15.5",
     "vue-i18n": "^8.0.0"
   },
   "devDependencies": {
