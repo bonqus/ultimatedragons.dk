@@ -120,7 +120,7 @@ export default {
       formData.append(GOOGLE_FORM_AGE_ID, "9");
       formData.append(GOOGLE_FORM_SEX_ID, "hej");
 
-      this.$axios.post(CORS_PROXY + GOOGLE_FORM_ACTION_URL, formData);
+      this.$axios.post(GOOGLE_FORM_ACTION_URL, formData);
     }
   }
 };
