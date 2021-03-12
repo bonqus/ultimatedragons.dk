@@ -95,13 +95,14 @@ export default {
       const GOOGLE_FORM_NAME_ID = "entry.717164993";
       const GOOGLE_FORM_AGE_ID = "entry.452129453";
       const GOOGLE_FORM_SEX_ID = "entry.1999305236";
+      const CORS_PROXY = "https://cors-escape.herokuapp.com/";
 
       const GOOGLE_FORM_ACTION_URL =
         "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdEyndlFX_uqiIzDk4cu-24a0VU22evl8DHR4Xmt5e4mYYLcA/formResponse";
 
       this.$axios({
         method: "post",
-        url: GOOGLE_FORM_ACTION_URL,
+        url: CORS_PROXY + GOOGLE_FORM_ACTION_URL,
         data: {
           [GOOGLE_FORM_NAME_ID]: "lkol",
           [GOOGLE_FORM_AGE_ID]: "9",
