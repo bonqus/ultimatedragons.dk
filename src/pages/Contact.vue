@@ -1,9 +1,6 @@
 <template>
   <q-page class="row bg-black text-white ">
     <q-scroll-area class="q-px-md col">
-      <q-btn v-show="false" @click="sendStuff()">
-        hej
-      </q-btn>
       <div class="row">
         <div
           class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
@@ -71,12 +68,12 @@ export default {
           email: "ultimatedragonsdenmark@gmail.com"
         },
         {
-          name: "Søren Alstrup",
+          name: "Anita Pedersen",
           role: "Board Member",
           email: "ultimatedragonsdenmark@gmail.com"
         },
         {
-          name: "Anita Pedersen",
+          name: "Jonathan Ortved Melcher",
           role: "Alternate",
           email: "ultimatedragonsdenmark@gmail.com"
         }
