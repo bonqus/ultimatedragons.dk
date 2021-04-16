@@ -10,12 +10,12 @@
               <tr @click="map = true">
                 <td class="text-left">Fælledparken</td>
                 <td class="text-left">{{ $t("Monday") }}</td>
-                <td class="text-right">17:30 - 19:30</td>
+                <td class="text-right">17:00 - 19:00</td>
               </tr>
               <tr @click="map = true">
                 <td class="text-left">Fælledparken</td>
                 <td class="text-left">{{ $t("Thursday") }}</td>
-                <td class="text-right">17:30 - 19:30</td>
+                <td class="text-right">17:00 - 19:00</td>
               </tr>
             </tbody>
           </q-markup-table>
