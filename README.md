@@ -1,17 +1,17 @@
 # ultimatedragons.dk
 The src code of ultimatedragons.dk
 
-## Makefile
+## Scrips
 
-`make lint`
+`yarn lint`
 *Fix all autofixable linting errors*
 -------------------------------------------------------------------------------
-`make run`
+`yarn run`
 *Run the app*
 -------------------------------------------------------------------------------
-`make build`
+`yarn build`
 *Build distribution for deployment*
 -------------------------------------------------------------------------------
-`make deploy`
+`yarn deploy`
 *Deploy the distribution*
 -------------------------------------------------------------------------------
