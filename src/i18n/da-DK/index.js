@@ -45,5 +45,10 @@ export default {
   "Indoor": "Inde",
   "Outdoor": "Ude",
   "Men": "Herrer",
-  "Women": "Damer"
+  "Women": "Damer",
+  "Mixed": "Mixed",
+  "Open": "Open",
+  "OK": "OK",
+  "Discs": "Discs",
+  "Shorts": "Shorts"
 };

@@ -44,5 +44,10 @@ export default {
   "Indoor": "Indoor",
   "Outdoor": "Outdoor",
   "Men": "Men",
-  "Women": "Women"
+  "Women": "Women",
+  "Mixed": "Mixed",
+  "Open": "Open",
+  "OK": "OK",
+  "Discs": "Discs",
+  "Shorts": "Shorts"
 };
