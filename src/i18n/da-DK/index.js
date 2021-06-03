@@ -43,6 +43,7 @@ export default {
   "The most social ultimate frisbee club in Denmark, with room for all levels of experience.": "Den mest sociale ultimate frisbee klub i Danmark, med plads til alle niveuer.",
   "Ultimate frisbee in the heart of Copenhagen": "Ultimate frisbee i hjertet af København",
   "Indoor": "Inde",
+  "Outdoor": "Ude",
   "Men": "Herrer",
   "Women": "Damer"
 };

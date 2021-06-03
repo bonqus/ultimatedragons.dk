@@ -6,7 +6,7 @@
           class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
         >
           <h2 class="text-center">
-            2020/2021 {{ $t("Members") }} {{ $t("Indoor") }}
+            2021 {{ $t("Members") }} {{ $t("Outdoor") }}
           </h2>
           <q-btn-toggle
             v-model="sex"
