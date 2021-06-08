@@ -1,0 +1,1 @@
+.list-transition-enter,.list-transition-leave-to{transition:all 0.5s;opacity:0}.list-transition-leave-active{transition:all 0.5s;position:absolute;opacity:0}.list-transition-move{transition:all 0.5s}
