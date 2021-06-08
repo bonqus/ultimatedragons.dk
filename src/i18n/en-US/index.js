@@ -49,5 +49,6 @@ export default {
   "Open": "Open",
   "OK": "OK",
   "Discs": "Discs",
-  "Shorts": "Shorts"
+  "Shorts": "Shorts",
+  "Last Update": "Last Update"
 };
