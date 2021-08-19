@@ -66,7 +66,7 @@
               <tr v-for="(disc, i) in discs" :key="i" @click="show_disc(disc)">
                 <td class="text-left">{{ $t(disc.label) }}</td>
                 <td class="text-right">{{ $n(60, "currency") }}</td>
-                <td class="text-right">{{ $n(80, "currency") }}</td>
+                <td class="text-right">{{ $n(100, "currency") }}</td>
               </tr>
             </tbody>
           </q-markup-table>
