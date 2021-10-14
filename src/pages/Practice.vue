@@ -96,7 +96,7 @@ const practice = [
   {
     team: "open",
     season: "Summer",
-    map: maps.Lunderhuspark,
+    map: maps.Lundehusparken,
     name: "Lundehusparken",
     day: "Thursday",
     time: "17:30 - 19:30"
@@ -128,7 +128,7 @@ const practice = [
   {
     team: "mix",
     season: "Summer",
-    map: maps.Lunderhuspark,
+    map: maps.Lundehusparken,
     name: "Lundehusparken",
     day: "Thursday",
     time: "17:30 - 19:30"
@@ -152,7 +152,7 @@ const practice = [
   {
     team: "women",
     season: "Summer",
-    map: maps.Lunderhuspark,
+    map: maps.Lundehusparken,
     name: "Lundehusparken",
     day: "Thursday",
     time: "17:30 - 19:30"
