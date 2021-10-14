@@ -39,6 +39,7 @@ export default {
   Tuesday: "Tuesday",
   Thursday: "Thursday",
   Monday: "Monday",
+  Wednesday: "Wednesday",
   Sunday: "Sunday",
   Practice: "Practice",
   "All mixed practice has been canceled due to the coronavirus outbreak.":
