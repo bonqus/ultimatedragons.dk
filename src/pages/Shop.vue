@@ -123,8 +123,8 @@
       </div>
     </q-scroll-area>
     <q-dialog v-model="disc_dialog">
-      <q-card>
-        <q-img :src="disc.src" width="500px" height="500px" />
+      <q-card style="max-width: 600px; width: 100%" >
+        <q-img :src="disc.src"/>
         <q-card-actions align="right">
           <q-btn flat :label="$t('OK')" v-close-popup />
         </q-card-actions>
