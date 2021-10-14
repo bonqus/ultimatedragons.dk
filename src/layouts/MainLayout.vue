@@ -68,8 +68,8 @@ export default {
       lang: this.$i18n.locale,
       // $i18n.availableLocales
       langOptions: [
-        { value: "en-US", label: "English" },
-        { value: "da-DK", label: "Dansk" }
+        { value: "en-US", label: "🇺🇸 English" },
+        { value: "da-DK", label: "🇩🇰 Dansk" }
       ],
       links: [
         { icon: "group", label: "Practice", to: "/practice" },
