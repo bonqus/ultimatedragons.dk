@@ -32,24 +32,32 @@ export default {
   Price: "Pris",
   "Players uniform": "Spillertøj",
   "The price of the players uniform is indicative and not fixed.":
-  "Prisen på spillertøj er ikke fast men vejledende.",
+    "Prisen på spillertøj er ikke fast men vejledende.",
   "Payment options": "Betalingsmuligheder",
-  "For bank transfers, the payer's full name must be noted.":"Ved bankoverførsler skal betalers fulde navn noteres.",
+  "For bank transfers, the payer's full name must be noted.":
+    "Ved bankoverførsler skal betalers fulde navn noteres.",
   Tuesday: "Tirsdag",
   Thursday: "Torsdag",
   Monday: "Mandag",
+  Sunday: "Søndag",
   Practice: "Træning",
-  "All mixed practice has been canceled due to the coronavirus outbreak.": "Al mixtræning er aflyst pga. coronavirus udbrudet.",
-  "The most social ultimate frisbee club in Denmark, with room for all levels of experience.": "Den mest sociale ultimate frisbee klub i Danmark, med plads til alle niveuer.",
-  "Ultimate frisbee in the heart of Copenhagen": "Ultimate frisbee i hjertet af København",
-  "Indoor": "Inde",
-  "Outdoor": "Ude",
-  "Men": "Herrer",
-  "Women": "Damer",
-  "Mixed": "Mixed",
-  "Open": "Open",
-  "OK": "OK",
-  "Discs": "Discs",
-  "Shorts": "Shorts",
-  "Last Update": "Seneste opdatering"
+  "All mixed practice has been canceled due to the coronavirus outbreak.":
+    "Al mixtræning er aflyst pga. coronavirus udbrudet.",
+  "The most social ultimate frisbee club in Denmark, with room for all levels of experience.":
+    "Den mest sociale ultimate frisbee klub i Danmark, med plads til alle niveuer.",
+  "Ultimate frisbee in the heart of Copenhagen":
+    "Ultimate frisbee i hjertet af København",
+  Indoor: "Inde",
+  Outdoor: "Ude",
+  Men: "Herrer",
+  Women: "Damer",
+  Mixed: "Mixed",
+  Open: "Open",
+  OK: "OK",
+  Discs: "Discs",
+  Shorts: "Shorts",
+  "Last Update": "Seneste opdatering",
+  Summer: "Sommer",
+  Winter: "Vinter",
+  Seasons: "Sæson"
 };

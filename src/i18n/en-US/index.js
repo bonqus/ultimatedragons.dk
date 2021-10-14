@@ -31,24 +31,33 @@ export default {
   Members: "Members",
   Price: "Price",
   "Players uniform": "Players uniform",
-  "The price of the players uniform is indicative and not fixed.":"The price of the players uniform is indicative and not fixed.",
+  "The price of the players uniform is indicative and not fixed.":
+    "The price of the players uniform is indicative and not fixed.",
   "Payment options": "Payment options",
-  "For bank transfers, the payer's full name must be noted.":"For bank transfers, the payer's full name must be noted.",
+  "For bank transfers, the payer's full name must be noted.":
+    "For bank transfers, the payer's full name must be noted.",
   Tuesday: "Tuesday",
   Thursday: "Thursday",
   Monday: "Monday",
+  Sunday: "Sunday",
   Practice: "Practice",
-  "All mixed practice has been canceled due to the coronavirus outbreak.": "All mixed practice has been canceled due to the coronavirus outbreak.",
-  "The most social ultimate frisbee club in Denmark, with room for all levels of experience.": "The most social ultimate frisbee club in Denmark, with room for all levels of experience.",
-  "Ultimate frisbee in the heart of Copenhagen": "Ultimate frisbee in the heart of Copenhagen",
-  "Indoor": "Indoor",
-  "Outdoor": "Outdoor",
-  "Men": "Men",
-  "Women": "Women",
-  "Mixed": "Mixed",
-  "Open": "Open",
-  "OK": "OK",
-  "Discs": "Discs",
-  "Shorts": "Shorts",
-  "Last Update": "Last Update"
+  "All mixed practice has been canceled due to the coronavirus outbreak.":
+    "All mixed practice has been canceled due to the coronavirus outbreak.",
+  "The most social ultimate frisbee club in Denmark, with room for all levels of experience.":
+    "The most social ultimate frisbee club in Denmark, with room for all levels of experience.",
+  "Ultimate frisbee in the heart of Copenhagen":
+    "Ultimate frisbee in the heart of Copenhagen",
+  Indoor: "Indoor",
+  Outdoor: "Outdoor",
+  Men: "Men",
+  Women: "Women",
+  Mixed: "Mixed",
+  Open: "Open",
+  OK: "OK",
+  Discs: "Discs",
+  Shorts: "Shorts",
+  "Last Update": "Last Update",
+  Summer: "Summer",
+  Winter: "Winter",
+  Season: "Season"
 };

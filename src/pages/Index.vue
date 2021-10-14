@@ -14,10 +14,10 @@
             {{ $t("Ultimate frisbee in the heart of Copenhagen") }}
           </h1>
           <q-img
-            @click="$router.push('teams')"
+            @click="$router.push('practice')"
             src="~assets/dragons-logo.png"
           />
-          <q-btn flat class="text-grey" label="Enter the dragon" to="/teams" />
+          <q-btn flat class="text-grey" label="Enter the dragon" to="/practice" />
 
           <!-- <q-video
                src="https://www.youtu.be/XGnnYiwK4Dw?rel=0"

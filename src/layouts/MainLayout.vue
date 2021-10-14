@@ -72,7 +72,7 @@ export default {
         { value: "da-DK", label: "Dansk" }
       ],
       links: [
-        { icon: "group", label: "Teams", to: "/teams" },
+        { icon: "group", label: "Practice", to: "/practice" },
         { icon: "store", label: "Shop", to: "/shop" },
         { icon: "alternate_email", label: "Contact", to: "/contact" }
       ]

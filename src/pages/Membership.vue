@@ -6,9 +6,9 @@
           class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
         >
           <h2 class="text-center">
-            2021 {{ $t("Members") }} {{ $t("Outdoor") }}
+            2021-22 {{ $t("Members") }} {{ $t("Indoor") }}
           </h2>
-          {{$t("Last Update")}}: 2021-06-08
+          {{ $t("Last Update") }}: 2021-10-14
           <q-btn-toggle
             v-model="sex"
             class="q-py-md"
@@ -46,41 +46,24 @@ export default {
       search: "",
       sex: "all",
       members: [
-        {name: "Anders Budolfsen", sex: "Mand"},
-        {name: "Anders Wulff Kringelbach", sex: "Mand"},
-        {name: "Anita Pedersen", sex: "Kvinde"},
-        {name: "Arianne Brooks", sex: "Kvinde"},
-        {name: "Casper Foltmar Gammelgaard", sex: "Mand"},
-        {name: "Christine Albrechtsen", sex: "Kvinde"},
-        {name: "Christoph Markus Schläpfer", sex: "Mand"},
-        {name: "Ditte Schønnemann Jørgensen", sex: "Kvinde"},
-        {name: "Esben Larsen Rasmussen", sex: "Mand"},
-        {name: "Jakob Eiby", sex: "Mand"},
-        {name: "Jeppe Qin Hansen", sex: "Mand"},
-        {name: "Johan Aleksander Rindmar", sex: "Mand"},
-        {name: "Jonas Hagsholm Pedersen", sex: "Mand"},
-        {name: "Jonathan Ortved Melcher", sex: "Mand"},
-        {name: "Kirsten Hell Knudsen", sex: "Kvinde"},
-        {name: "Laura Toppenberg Lazar", sex: "Kvinde"},
-        {name: "Maria Marker", sex: "Kvinde"},
-        {name: "Mathias Bohn Rasmussen", sex: "Mand"},
-        {name: "Mathias Sunesen", sex: "Mand"},
-        {name: "Mathilde Eiby", sex: "Kvinde"},
-        {name: "Mette Godiksen", sex: "Kvinde"},
-        {name: "Mind Jinnapat Indrapiromkul", sex: "Kvinde"},
-        {name: "Nemo Bo Molbech", sex: "Mand"},
-        {name: "Oliver Clemmensen", sex: "Mand"},
-        {name: "Oliver Elleholm Kristoffersen", sex: "Mand"},
-        {name: "Oskar Holm Møller", sex: "Mand"},
-        {name: "Peter Alexander Garnæs", sex: "Mand"},
-        {name: "Rikke Brouw Hyldahl", sex: "Kvinde"},
-        {name: "Sofie Bejder", sex: "Kvinde"},
-        {name: "Sofie Halkier", sex: "Kvinde"},
-        {name: "Sophie Jelstrup", sex: "Kvinde"},
-        {name: "Søren Alstrup", sex: "Mand"},
-        {name: "Thomas Robert Träff", sex: "Mand"},
-        {name: "Thomas Ryde", sex: "Mand"},
-        {name: "Thomas Siggaard Andersen", sex: "Mand"}
+        { name: "Anders Hvidkjær", sex: "Mand" },
+        { name: "Anders Kyvsgaard Budolfsen", sex: "Mand" },
+        { name: "Benjamin Toppenberg Lazar", sex: "Mand" },
+        { name: "Ditte Schønnemann Jørgensen", sex: "Kvinde" },
+        { name: "Jakob Eiby", sex: "Mand" },
+        { name: "Jonas Hagsholm Pedersen", sex: "Mand" },
+        { name: "Jonathan Ortved Melcher", sex: "Mand" },
+        { name: "Kirsten Hell Knudsen", sex: "Kvinde" },
+        { name: "Laura Toppenberg Lazar", sex: "Kvinde" },
+        { name: "Mathias Bohn Rasmussen", sex: "Mand" },
+        { name: "Mette Godiksen", sex: "Kvinde" },
+        { name: "Nemo Bo Molbech", sex: "Mand" },
+        { name: "Oliver Clemmensen", sex: "Mand" },
+        { name: "Oliver Elleholm Kristoffersen", sex: "Mand" },
+        { name: "Oskar Holm Møller", sex: "Mand" },
+        { name: "Sophie Jelstrup", sex: "Kvinde" },
+        { name: "Thomas Robert Träff", sex: "Mand" },
+        { name: "Thomas Siggaard Andersen", sex: "Mand" }
       ]
     };
   },

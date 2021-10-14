@@ -4,7 +4,6 @@
       <div class="row">
         <div class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
           <h2 class="q-mb-md">{{ $t("Open") }}</h2>
-          <h3 class="q-mb-md q-mt-none">{{ $t("Practice") }}</h3>
           <q-markup-table flat bordered separator="none" class="cursor-pointer">
             <tbody>
               <tr @click="mapf = true">
@@ -21,7 +20,6 @@
           </q-markup-table>
 
           <h2 class="q-mb-md">{{ $t("Women") }}</h2>
-          <h3 class="q-mb-md q-mt-none">{{ $t("Practice") }}</h3>
           <q-markup-table flat bordered separator="none" class="cursor-pointer">
             <tbody>
               <tr @click="mapf = true">
@@ -38,7 +36,6 @@
           </q-markup-table>
 
           <h2 class="q-mb-md">{{ $t("Mixed") }}</h2>
-          <h3 class="q-mb-md q-mt-none">{{ $t("Practice") }}</h3>
           <q-markup-table flat bordered separator="none" class="cursor-pointer">
             <tbody>
               <tr @click="mapl = true">

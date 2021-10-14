@@ -2,7 +2,9 @@
   <q-page class="row bg-black text-white ">
     <q-scroll-area class="q-px-md col">
       <div class="row">
-        <div class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs">
+        <div
+          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
+        >
           <h2 class="q-mb-md">{{ $t("Membership") }}</h2>
           <q-markup-table flat bordered separator="none">
             <tbody>
@@ -54,7 +56,7 @@
             }}
           </span>
           <h2 class="q-mb-md">{{ $t("Discs") }}</h2>
-          <q-markup-table flat bordered separator="none">
+          <q-markup-table flat bordered separator="none" class="cursor-pointer">
             <thead>
               <tr>
                 <th class="text-left">{{ $t("Color") }}</th>
@@ -121,7 +123,12 @@
       </div>
     </q-scroll-area>
     <q-dialog v-model="disc_dialog">
-      <q-img :src="disc.src" />
+      <q-card>
+        <q-img :src="disc.src" width="500px" height="500px" />
+        <q-card-actions align="right">
+          <q-btn flat :label="$t('OK')" v-close-popup />
+        </q-card-actions>
+      </q-card>
     </q-dialog>
   </q-page>
 </template>
@@ -136,12 +143,12 @@ export default {
       registration_number: 2253,
       disc_dialog: false,
       discs: [
-        { label: "Black", src: "statics/discs/black.jpg" },
-        { label: "Grey", src: "statics/discs/grey.jpg" },
-        { label: "Red", src: "statics/discs/red.jpg" },
-        { label: "Yellow", src: "statics/discs/yellow.jpg" }
+        { label: "Black", src: "statics/discs/black.png" },
+        { label: "Grey", src: "statics/discs/grey.png" },
+        { label: "Red", src: "statics/discs/red.png" },
+        { label: "Yellow", src: "statics/discs/yellow.png" }
       ],
-      disc: { label: "Black", src: "~assets/discs/black.jpg" }
+      disc: { label: "Black", src: "~assets/discs/black.png" }
     };
   },
   methods: {
