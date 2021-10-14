@@ -5,7 +5,7 @@
         <div
           class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
         >
-          <!-- <h2 class="q-mb-md">{{ $t("Latest Pictures") }}</h2> -->
+          <!-- <h2 class="q-mb-md">{{ $t("Galleri") }}</h2> -->
 
           <insta-feed
             token="IGQVJYbE1ucndIMThHQjY4cU9NaWdFcEhSZA21pZA3VfUXpKY0pCY19xV3kxc2h5VUpKUS1iSU02U3F2MVBTb1pEY1ZAhRU1RSEhrT1J6XzdObURqRFA3Y1JVSW10Y05IMlhPWHlMN3dJN1dwUkpjMGhFTQZDZD"
@@ -28,10 +28,11 @@
                   class="cursor-pointer"
                   @click="followLink(props.feed.permalink)"
                 />
-                <q-card-section>
-                  <div class="text-white text-center text-body1">
-                    {{ props.feed.caption }}
-                  </div>
+                <q-card-section
+                  class="text-white text-center text-body1"
+                  style="overflow-wrap: break-word"
+                >
+                  {{ props.feed.caption }}
                 </q-card-section>
               </q-card>
             </template>
