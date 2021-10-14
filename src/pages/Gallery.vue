@@ -20,16 +20,19 @@
             </template>
 
             <template v-slot:feeds="props">
-              <a :href="props.feed.permalink" rel="noopener" target="_blank">
-                <div class="instagram-image q-mb-md">
+              <div class="instagram-image q-mb-xl">
+                <a :href="props.feed.permalink" rel="noopener" target="_blank">
                   <q-img
                     :src="props.feed.media_url"
                     alt="Instagram post"
                     width="100%"
                   />
-                  <div :text="props.feed.caption" />
+                </a>
+
+                <div class="text-white text-center q-mt-sm">
+                  {{ props.feed.caption }}
                 </div>
-              </a>
+              </div>
             </template>
 
             <template v-slot:error="props">
