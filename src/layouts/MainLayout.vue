@@ -74,7 +74,8 @@ export default {
       links: [
         { icon: "group", label: "Practice", to: "/practice" },
         { icon: "store", label: "Shop", to: "/shop" },
-        { icon: "alternate_email", label: "Contact", to: "/contact" }
+        { icon: "alternate_email", label: "Contact", to: "/contact" },
+        { icon: "collections", label: "Gallery", to: "/gallery" }
       ]
     };
   },

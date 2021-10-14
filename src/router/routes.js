@@ -11,7 +11,8 @@ const routes = [
       { path: "practice", component: () => import("pages/Practice.vue") },
       { path: "membership", component: () => import("pages/Membership.vue") },
       { path: "shop", component: () => import("pages/Shop.vue") },
-      { path: "contact", component: () => import("pages/Contact.vue") }
+      { path: "contact", component: () => import("pages/Contact.vue") },
+      { path: "gallery", component: () => import("pages/Gallery.vue") }
     ]
   }
 ];

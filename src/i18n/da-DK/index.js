@@ -61,5 +61,7 @@ export default {
   Summer: "Sommer",
   Winter: "Vinter",
   Season: "Sæson",
-  season: "sæson"
+  season: "sæson",
+  Loading: "Indlæser...",
+  Gallery: "Galleri"
 };
