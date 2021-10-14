@@ -20,19 +20,20 @@
             </template>
 
             <template v-slot:feeds="props">
-              <div class="instagram-image q-mb-xl">
-                <a :href="props.feed.permalink" rel="noopener" target="_blank">
-                  <q-img
-                    :src="props.feed.media_url"
-                    alt="Instagram post"
-                    width="100%"
-                  />
-                </a>
-
-                <div class="text-white text-center q-mt-sm">
-                  {{ props.feed.caption }}
-                </div>
-              </div>
+              <q-card class="q-mb-lg">
+                <img
+                  :src="props.feed.media_url"
+                  alt="Instagram post"
+                  width="100%"
+                  class="cursor-pointer"
+                  @click="followLink(props.feed.permalink)"
+                />
+                <q-card-section>
+                  <div class="text-white text-center text-body1">
+                    {{ props.feed.caption }}
+                  </div>
+                </q-card-section>
+              </q-card>
             </template>
 
             <template v-slot:error="props">
@@ -52,6 +53,11 @@ export default {
   name: "ContactPage",
   components: {
     InstaFeed
+  },
+  methods: {
+    followLink: function(link) {
+      window.open(link, "_blank");
+    }
   }
 };
 </script>
