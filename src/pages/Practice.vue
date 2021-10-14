@@ -6,7 +6,7 @@
           class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
         >
           <h2 class="q-mb-none row justify-between">
-            {{ $t("Seasons") }}: {{ $t(season) }}
+            {{ $t(season) }} {{ $t("season") }}
             <q-btn @click="toggleSeason()" round :icon="seasonIcon" />
           </h2>
           <h6 class="q-mt-none">{{ dateInterval }}</h6>

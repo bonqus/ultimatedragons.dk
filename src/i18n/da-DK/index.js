@@ -59,5 +59,6 @@ export default {
   "Last Update": "Seneste opdatering",
   Summer: "Sommer",
   Winter: "Vinter",
-  Seasons: "Sæson"
+  Season: "Sæson",
+  season: "sæson"
 };
