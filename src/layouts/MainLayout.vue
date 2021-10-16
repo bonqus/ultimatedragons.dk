@@ -58,9 +58,9 @@
 </template>
 
 <script>
-import EssentialLink from "components/EssentialLink";
+import { defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   name: "MainLayout",
   data() {
     return {
@@ -84,5 +84,5 @@ export default {
       this.$i18n.locale = lang;
     }
   }
-};
+});
 </script>
