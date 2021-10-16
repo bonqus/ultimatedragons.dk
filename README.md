@@ -3,6 +3,9 @@ The src code of ultimatedragons.dk
 
 ## Scrips
 
+`yarn`
+*Install dependencies*
+-------------------------------------------------------------------------------
 `yarn lint`
 *Fix all autofixable linting errors*
 -------------------------------------------------------------------------------
