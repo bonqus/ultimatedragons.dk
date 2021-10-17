@@ -20,6 +20,7 @@
     "vuex": "^4.0.1"
   },
   "devDependencies": {
+    "push-dir": "^0.4.1",
     "@babel/eslint-parser": "^7.13.14",
     "@quasar/app": "^3.0.0",
     "eslint": "^7.14.0",
