@@ -9,7 +9,9 @@
              allowfullscreen>
              </iframe>
              </div> -->
-        <div class="col-xs-11 col-sm-8 col-md-5 col-lg-4 column flex-center text-center">
+        <div
+          class="col-xs-11 col-sm-8 col-md-5 col-lg-4 column flex-center text-center"
+        >
           <h1 class="text-grey">
             {{ $t("Ultimate frisbee in the heart of Copenhagen") }}
           </h1>
@@ -17,7 +19,12 @@
             @click="$router.push('practice')"
             src="~assets/dragons-logo.png"
           />
-          <q-btn flat class="text-grey" label="Enter the dragon" to="/practice" />
+          <q-btn
+            flat
+            class="text-grey"
+            label="Enter the dragon"
+            to="/practice"
+          />
 
           <!-- <q-video
                src="https://www.youtu.be/XGnnYiwK4Dw?rel=0"
@@ -44,7 +51,18 @@
 </template>
 
 <script>
-export default {
-  name: "PageIndex"
-};
+import { defineComponent } from 'vue';
+
+  import { useQuasar } from 'quasar'
+
+export default defineComponent({
+  name: "PageIndex",
+
+    beforeCreate() {
+      const $q = useQuasar()
+      const locale = $q.lang.getLocale() // returns a string
+      if (locale.split('-')[0] !== 'da')
+        this.$i18n.locale = "en-US";
+    },
+});
 </script>
