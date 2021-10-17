@@ -143,12 +143,12 @@ export default {
       registration_number: 2253,
       disc_dialog: false,
       discs: [
-        { label: "Black", src: "statics/discs/black.png" },
-        { label: "Grey", src: "statics/discs/grey.png" },
-        { label: "Red", src: "statics/discs/red.png" },
-        { label: "Yellow", src: "statics/discs/yellow.png" }
+        { label: "Black", src: require("assets/discs/black.png") },
+        { label: "Grey", src: require("assets/discs/grey.png") },
+        { label: "Red", src: require("assets/discs/red.png") },
+        { label: "Yellow", src: require("assets/discs/yellow.png") }
       ],
-      disc: { label: "Black", src: "~assets/discs/black.png" }
+      disc: null
     };
   },
   methods: {
