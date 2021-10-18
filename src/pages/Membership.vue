@@ -61,8 +61,10 @@ export default {
         { name: "Oliver Clemmensen", sex: "Mand" },
         { name: "Oliver Elleholm Kristoffersen", sex: "Mand" },
         { name: "Oskar Holm Møller", sex: "Mand" },
+        { name: "Rikke Brouw Hyldahl", sex: "Kvinde" },
         { name: "Sophie Jelstrup", sex: "Kvinde" },
         { name: "Thomas Robert Träff", sex: "Mand" },
+        { name: "Thomas Ryde ", sex: "Mand" },
         { name: "Thomas Siggaard Andersen", sex: "Mand" }
       ]
     };
