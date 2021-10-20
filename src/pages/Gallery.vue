@@ -10,7 +10,6 @@
           <insta-feed
             token="IGQVJYbE1ucndIMThHQjY4cU9NaWdFcEhSZA21pZA3VfUXpKY0pCY19xV3kxc2h5VUpKUS1iSU02U3F2MVBTb1pEY1ZAhRU1RSEhrT1J6XzdObURqRFA3Y1JVSW10Y05IMlhPWHlMN3dJN1dwUkpjMGhFTQZDZD"
             fields="media_url,media_type,caption,permalink"
-            container-class="image-container"
             :mediatypes="['IMAGE']"
           >
             <template v-slot:loading="props">
@@ -21,16 +20,15 @@
 
             <template v-slot:feeds="props">
               <q-card class="q-mb-lg">
-                <img
+                <q-img
                   :src="props.feed.media_url"
                   alt="Instagram post"
-                  width="100%"
                   class="cursor-pointer"
                   @click="followLink(props.feed.permalink)"
                 />
                 <q-card-section
                   class="text-white text-center text-body1"
-                  style="overflow-wrap: break-word"
+                  style="overflow-wrap: anywhere"
                 >
                   {{ props.feed.caption }}
                 </q-card-section>

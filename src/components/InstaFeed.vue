@@ -1,5 +1,5 @@
 <template>
-  <div :class="containerClass">
+  <div>
     <slot name="loading" :loading="loading" />
     <slot
       v-for="(feed, index) in feeds"
@@ -42,12 +42,6 @@ export default {
     mediatypes: {
       type: Array,
       required: true
-    },
-    // Class for container div
-    containerClass: {
-      type: String,
-      default: "",
-      required: false
     }
   },
   data: () => ({
