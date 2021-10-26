@@ -8,9 +8,17 @@
       :mediatypes="['IMAGE']"
     >
       <template v-slot:loading="props">
-        <h6 v-if="props.loading" class="fancy-loading">
-          {{ $t("Loading") }}
-        </h6>
+        <template v-if="props.loading">
+          <q-card v-for="k in 3" :key="k" class="q-mb-lg">
+            <q-skeleton height="400px" square />
+            <q-card-section
+              class="text-white text-center text-body1"
+              style="overflow-wrap: anywhere"
+            >
+              <q-skeleton type="text" />
+            </q-card-section>
+          </q-card>
+        </template>
       </template>
 
       <template v-slot:feeds="props">

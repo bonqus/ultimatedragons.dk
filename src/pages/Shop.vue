@@ -47,7 +47,7 @@
       {{ $t("The price of the players uniform is indicative and not fixed.") }}
     </span>
     <h2 class="q-mb-md">{{ $t("Discs") }}</h2>
-    <q-markup-table flat bordered separator="none" class="cursor-pointer">
+    <q-markup-table flat bordered separator="none">
       <thead>
         <tr>
           <th class="text-left">{{ $t("Color") }}</th>
@@ -55,7 +55,7 @@
           <th class="text-right">{{ $t("Price") }}</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="cursor-pointer">
         <tr v-for="(disc, i) in discs" :key="i" @click="show_disc(disc)">
           <td class="text-left">{{ $t(disc.label) }}</td>
           <td class="text-right">{{ $n(60, "currency") }}</td>
