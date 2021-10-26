@@ -90,14 +90,14 @@ export default {
       events: [
         {
           emoji: "🥏",
-          name: "Indendørsfinalstævne ",
-          occurence: "Unkown but often in march",
+          name: "Indendørsfinalstævne",
+          occurence: "Unkown but often in March",
           next: "",
         },
         {
           emoji: "🤓",
-          name: "Generalforsamling ",
-          occurence: "2nd saturday in march",
+          name: "Generalforsamling",
+          occurence: "2nd Saturday in march",
           next: "",
         },
         {
@@ -108,20 +108,20 @@ export default {
         },
         {
           emoji: "🥳",
-          name: "Summer Party ",
-          occurence: "2nd saturday in july",
+          name: "Summer Party",
+          occurence: "2nd Saturday in July",
           next: "",
         },
         {
           emoji: "🥏",
-          name: "Udendørsfinalstævne ",
-          occurence: "Unkown but often in september",
+          name: "Udendørsfinalstævne",
+          occurence: "Unkown but often in September",
           next: "",
         },
         {
           emoji: "🥳",
-          name: "Christmas Party ",
-          occurence: "2nd saturday in december",
+          name: "Christmas Party",
+          occurence: "2nd Saturday in December",
           next: "",
         },
       ],
