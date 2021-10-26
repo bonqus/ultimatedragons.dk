@@ -63,5 +63,10 @@ export default {
   Season: "Sæson",
   season: "sæson",
   Loading: "Indlæser...",
-  Gallery: "Galleri"
+  Gallery: "Galleri",
+  Committees: "Udvalg",
+  Calendar: "Kalender",
+  Tasks: "Opgaver",
+  All: "Alle",
+  "Reoccurring events": "Tilbagevendende begivenheder"
 };

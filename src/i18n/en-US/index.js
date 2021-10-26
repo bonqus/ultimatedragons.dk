@@ -63,5 +63,10 @@ export default {
   Season: "Season",
   season: "season",
   Loading: "Loading...",
-  Gallery: "Gallery"
+  Gallery: "Gallery",
+  Committees: "Committees",
+  Calendar: "Calendar",
+  Tasks: "Tasks",
+  All: "All",
+  "Reoccurring events": "Reoccurring events"
 };

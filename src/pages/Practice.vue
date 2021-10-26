@@ -1,73 +1,59 @@
 <template>
-  <q-page class="row bg-black text-white">
-    <q-scroll-area class="q-px-md col">
-      <div class="row">
-        <div
-          class="
-            q-px-md q-pb-xl
-            offset-md-4
-            col-md-4
-            offset-sm-2
-            col-sm-8 col-xs
-          "
+  <page>
+    <h2 class="q-mb-none row justify-between">
+      {{ $t(season) }} {{ $t("season") }}
+      <q-btn @click="toggleSeason()" round :icon="seasonIcon" />
+    </h2>
+    <h6 class="q-mt-none">{{ dateInterval }}</h6>
+
+    <h2 class="q-mb-md">{{ $t("Open") }}</h2>
+    <q-markup-table flat bordered separator="none" class="cursor-pointer">
+      <tbody>
+        <tr
+          v-for="(item, index) in openPractice"
+          :key="index"
+          @click="showMap(item.map)"
         >
-          <h2 class="q-mb-none row justify-between">
-            {{ $t(season) }} {{ $t("season") }}
-            <q-btn @click="toggleSeason()" round :icon="seasonIcon" />
-          </h2>
-          <h6 class="q-mt-none">{{ dateInterval }}</h6>
+          <td class="text-left">{{ item.name }}</td>
+          <td class="text-left">{{ $t(item.day) }}</td>
+          <td class="text-right">{{ item.time }}</td>
+        </tr>
+      </tbody>
+    </q-markup-table>
 
-          <h2 class="q-mb-md">{{ $t("Open") }}</h2>
-          <q-markup-table flat bordered separator="none" class="cursor-pointer">
-            <tbody>
-              <tr
-                v-for="(item, index) in openPractice"
-                :key="index"
-                @click="showMap(item.map)"
-              >
-                <td class="text-left">{{ item.name }}</td>
-                <td class="text-left">{{ $t(item.day) }}</td>
-                <td class="text-right">{{ item.time }}</td>
-              </tr>
-            </tbody>
-          </q-markup-table>
+    <h2 class="q-mb-md">{{ $t("Women") }}</h2>
+    <q-markup-table flat bordered separator="none" class="cursor-pointer">
+      <tbody>
+        <tr
+          v-for="(item, index) in womenPractice"
+          :key="index"
+          @click="showMap(item.map)"
+        >
+          <td class="text-left">{{ item.name }}</td>
+          <td class="text-left">{{ $t(item.day) }}</td>
+          <td class="text-right">{{ item.time }}</td>
+        </tr>
+      </tbody>
+    </q-markup-table>
 
-          <h2 class="q-mb-md">{{ $t("Women") }}</h2>
-          <q-markup-table flat bordered separator="none" class="cursor-pointer">
-            <tbody>
-              <tr
-                v-for="(item, index) in womenPractice"
-                :key="index"
-                @click="showMap(item.map)"
-              >
-                <td class="text-left">{{ item.name }}</td>
-                <td class="text-left">{{ $t(item.day) }}</td>
-                <td class="text-right">{{ item.time }}</td>
-              </tr>
-            </tbody>
-          </q-markup-table>
-
-          <h2 class="q-mb-md">{{ $t("Mixed") }}</h2>
-          <q-markup-table flat bordered separator="none" class="cursor-pointer">
-            <tbody>
-              <tr
-                v-for="(item, index) in mixPractice"
-                :key="index"
-                @click="showMap(item.map)"
-              >
-                <td class="text-left">{{ item.name }}</td>
-                <td class="text-left">{{ $t(item.day) }}</td>
-                <td class="text-right">{{ item.time }}</td>
-              </tr>
-            </tbody>
-          </q-markup-table>
-        </div>
-      </div>
-    </q-scroll-area>
+    <h2 class="q-mb-md">{{ $t("Mixed") }}</h2>
+    <q-markup-table flat bordered separator="none" class="cursor-pointer">
+      <tbody>
+        <tr
+          v-for="(item, index) in mixPractice"
+          :key="index"
+          @click="showMap(item.map)"
+        >
+          <td class="text-left">{{ item.name }}</td>
+          <td class="text-left">{{ $t(item.day) }}</td>
+          <td class="text-right">{{ item.time }}</td>
+        </tr>
+      </tbody>
+    </q-markup-table>
     <q-dialog v-model="map.show">
       <map-dialog :src="map.src" />
     </q-dialog>
-  </q-page>
+  </page>
 </template>
 <script>
 import meta from "src/utils/meta.js";

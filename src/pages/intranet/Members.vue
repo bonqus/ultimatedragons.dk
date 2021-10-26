@@ -1,41 +1,31 @@
 <template>
-  <q-page class="row bg-black text-white ">
-    <q-scroll-area class="q-px-md col">
-      <div class="row">
-        <div
-          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
-        >
-          <h2>
-            2021-22 {{ $t("Members") }} {{ $t("Indoor") }}
-          </h2>
-          {{ $t("Last Update") }}: 2021-10-14
-          <q-btn-toggle
-            v-model="sex"
-            class="q-py-md"
-            spread
-            toggle-color="primary"
-            :options="sexOptions"
-          />
-          <q-input class="q-mb-md" v-model="search" filled type="search">
-            <template v-slot:append>
-              <q-icon name="search" />
-            </template>
-          </q-input>
-          <transition-group
-            name="list-transition"
-            tag="div"
-            class="q-list q-list--dense q-list--dark"
-          >
-            <q-item v-for="member in membersfiltered" :key="member.name">
-              <q-item-section>
-                <q-item-label>{{ member.name }}</q-item-label>
-              </q-item-section>
-            </q-item>
-          </transition-group>
-        </div>
-      </div>
-    </q-scroll-area>
-  </q-page>
+  <page>
+    <h2>2021-22 {{ $t("Members") }} {{ $t("Indoor") }}</h2>
+    {{ $t("Last Update") }}: 2021-10-14
+    <q-btn-toggle
+      v-model="sex"
+      class="q-py-md"
+      spread
+      toggle-color="primary"
+      :options="sexOptions"
+    />
+    <q-input class="q-mb-md" v-model="search" filled type="search">
+      <template v-slot:append>
+        <q-icon name="search" />
+      </template>
+    </q-input>
+    <transition-group
+      name="list-transition"
+      tag="div"
+      class="q-list q-list--dense q-list--dark"
+    >
+      <q-item v-for="member in membersfiltered" :key="member.name">
+        <q-item-section>
+          <q-item-label>{{ member.name }}</q-item-label>
+        </q-item-section>
+      </q-item>
+    </transition-group>
+  </page>
 </template>
 
 <script>
@@ -65,33 +55,33 @@ export default {
         { name: "Sophie Jelstrup", sex: "Kvinde" },
         { name: "Thomas Robert Träff", sex: "Mand" },
         { name: "Thomas Ryde ", sex: "Mand" },
-        { name: "Thomas Siggaard Andersen", sex: "Mand" }
-      ]
+        { name: "Thomas Siggaard Andersen", sex: "Mand" },
+      ],
     };
   },
   computed: {
     membersfiltered() {
       if (this.search === "") {
         return [...this.members]
-          .filter(m => this.sex == "all" || m.sex === this.sex)
+          .filter((m) => this.sex == "all" || m.sex === this.sex)
           .sort((a, b) => (a.name > b.name ? 1 : -1));
       }
       return [
-        ...this.members.filter(m =>
+        ...this.members.filter((m) =>
           m.name.toLowerCase().includes(this.search.toLowerCase())
-        )
+        ),
       ]
-        .filter(m => this.sex == "all" || m.sex === this.sex)
+        .filter((m) => this.sex == "all" || m.sex === this.sex)
         .sort((a, b) => (a.name > b.name ? 1 : -1));
     },
     sexOptions() {
       return [
         { label: this.$t("All"), value: "all" },
         { label: this.$t("Men"), value: "Mand" },
-        { label: this.$t("Women"), value: "Kvinde" }
+        { label: this.$t("Women"), value: "Kvinde" },
       ];
-    }
-  }
+    },
+  },
 };
 </script>
 
