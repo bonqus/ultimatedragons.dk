@@ -1,5 +1,5 @@
 <template>
-  <page class="row bg-black text-white">
+  <page>
     <!-- <h2 class="q-mb-md">{{ $t("Galleri") }}</h2> -->
 
     <insta-feed
