@@ -5,7 +5,7 @@
         <div
           class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
         >
-          <h2 class="text-center">
+          <h2>
             2021-22 {{ $t("Members") }} {{ $t("Indoor") }}
           </h2>
           {{ $t("Last Update") }}: 2021-10-14

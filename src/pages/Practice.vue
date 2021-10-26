@@ -1,9 +1,15 @@
 <template>
-  <q-page class="row bg-black text-white ">
+  <q-page class="row bg-black text-white">
     <q-scroll-area class="q-px-md col">
       <div class="row">
         <div
-          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
+          class="
+            q-px-md q-pb-xl
+            offset-md-4
+            col-md-4
+            offset-sm-2
+            col-sm-8 col-xs
+          "
         >
           <h2 class="q-mb-none row justify-between">
             {{ $t(season) }} {{ $t("season") }}
@@ -64,24 +70,21 @@
   </q-page>
 </template>
 <script>
+import meta from "src/utils/meta.js";
 import MapDialog from "components/MapDialog.vue";
 const maps = {
   Faelledparken: {
-    src:
-      "https://www.google.com/maps/embed/v1/place?q=55.700525%2C%2012.568412&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ"
+    src: "https://www.google.com/maps/embed/v1/place?q=55.700525%2C%2012.568412&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ",
   },
   Lundehusparken: {
-    src:
-      "https://www.google.com/maps/embed/v1/place?q=55.717213%2C%2012.548236&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ"
+    src: "https://www.google.com/maps/embed/v1/place?q=55.717213%2C%2012.548236&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ",
   },
   Prismen: {
-    src:
-      "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOZL8gEpTUkYRW0ZZQvJh8z8&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ"
+    src: "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOZL8gEpTUkYRW0ZZQvJh8z8&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ",
   },
   DGI: {
-    src:
-      "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX8mNz3ZTUkYR5IcuWNz0yfg&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ"
-  }
+    src: "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJX8mNz3ZTUkYR5IcuWNz0yfg&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ",
+  },
 };
 
 const practice = [
@@ -91,7 +94,7 @@ const practice = [
     map: maps.Faelledparken,
     name: "Fælledparken",
     day: "Monday",
-    time: "17:30 - 19:30"
+    time: "17:30 - 19:30",
   },
   {
     team: "open",
@@ -99,7 +102,7 @@ const practice = [
     map: maps.Lundehusparken,
     name: "Lundehusparken",
     day: "Thursday",
-    time: "17:30 - 19:30"
+    time: "17:30 - 19:30",
   },
   {
     team: "open",
@@ -107,7 +110,7 @@ const practice = [
     map: maps.Prismen,
     name: "Prismen",
     day: "Tuesday",
-    time: "20:00 - 22:00"
+    time: "20:00 - 22:00",
   },
   {
     team: "open",
@@ -115,7 +118,7 @@ const practice = [
     map: maps.DGI,
     name: "DGI Byen",
     day: "Sunday",
-    time: "20:00 - 22:00"
+    time: "20:00 - 22:00",
   },
   {
     team: "mix",
@@ -123,7 +126,7 @@ const practice = [
     map: maps.Faelledparken,
     name: "Fælledparken",
     day: "Monday",
-    time: "17:30 - 19:30"
+    time: "17:30 - 19:30",
   },
   {
     team: "mix",
@@ -131,7 +134,7 @@ const practice = [
     map: maps.Lundehusparken,
     name: "Lundehusparken",
     day: "Thursday",
-    time: "17:30 - 19:30"
+    time: "17:30 - 19:30",
   },
   {
     team: "mix",
@@ -139,7 +142,7 @@ const practice = [
     map: maps.DGI,
     name: "DGI Byen",
     day: "Sunday",
-    time: "20:00 - 22:00"
+    time: "20:00 - 22:00",
   },
   {
     team: "women",
@@ -147,7 +150,7 @@ const practice = [
     map: maps.Faelledparken,
     name: "Fælledparken",
     day: "Monday",
-    time: "17:30 - 19:30"
+    time: "17:30 - 19:30",
   },
   {
     team: "women",
@@ -155,7 +158,7 @@ const practice = [
     map: maps.Lundehusparken,
     name: "Lundehusparken",
     day: "Thursday",
-    time: "17:30 - 19:30"
+    time: "17:30 - 19:30",
   },
   {
     team: "women",
@@ -163,7 +166,7 @@ const practice = [
     map: maps.Prismen,
     name: "Prismen",
     day: "Wednesday",
-    time: "18:30 - 20:30"
+    time: "18:30 - 20:30",
   },
   {
     team: "women",
@@ -171,60 +174,70 @@ const practice = [
     map: maps.DGI,
     name: "DGI Byen",
     day: "Sunday",
-    time: "20:00 - 22:00"
-  }
+    time: "20:00 - 22:00",
+  },
 ];
 
 export default {
-  name: "TeamsPage",
+  name: "PracticePage",
   data() {
     return {
       map: { show: false, src: "" },
-      season: this.currentSeason()
+      season: this.currentSeason(),
+      metaTags: {
+        description: "Practice time and place.",
+        title: "Ultimate Dragons | Practice",
+        url: "ultimatedragons.dk/practice",
+        img: "~assets/dragons-logo.png",
+      },
     };
   },
   computed: {
-    seasonIcon: function() {
+    seasonIcon: function () {
       if (this.season === "Summer") return "wb_sunny";
       return "ac_unit";
     },
-    dateInterval: function() {
+    dateInterval: function () {
       if (this.season === "Summer") return "April 1 - September 30";
       return "October 1 - March 31";
     },
-    mixPractice: function() {
-      return practice.filter(p => p.team === "mix" && p.season === this.season);
-    },
-    womenPractice: function() {
+    mixPractice: function () {
       return practice.filter(
-        p => p.team === "women" && p.season === this.season
+        (p) => p.team === "mix" && p.season === this.season
       );
     },
-    openPractice: function() {
+    womenPractice: function () {
       return practice.filter(
-        p => p.team === "open" && p.season === this.season
+        (p) => p.team === "women" && p.season === this.season
       );
-    }
+    },
+    openPractice: function () {
+      return practice.filter(
+        (p) => p.team === "open" && p.season === this.season
+      );
+    },
   },
   methods: {
-    showMap: function(map) {
+    showMap: function (map) {
       this.map.src = map.src;
       this.map.show = true;
     },
-    currentSeason: function() {
+    currentSeason: function () {
       const toDay = new Date();
       const month = toDay.getMonth() + 1;
       if (month > 9 || month < 4) return "Winter";
       return "Summer";
     },
-    toggleSeason: function() {
+    toggleSeason: function () {
       if (this.season === "Summer") {
         this.season = "Winter";
       } else this.season = "Summer";
-    }
+    },
   },
   components: {
-    MapDialog
-  }
+    MapDialog,
+  },
+
+  meta,
 };
 </script>

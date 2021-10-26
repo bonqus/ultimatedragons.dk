@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: "MainLayout",
@@ -69,20 +69,21 @@ export default defineComponent({
       // $i18n.availableLocales
       langOptions: [
         { value: "en-US", label: "🇺🇸 English" },
-        { value: "da-DK", label: "🇩🇰 Dansk" },
+        { value: "da-DK", label: "🇩🇰 Dansk" }
       ],
       links: [
-        { icon: "group", label: "Practice", to: "/practice" },
-        { icon: "store", label: "Shop", to: "/shop" },
-        { icon: "collections", label: "Gallery", to: "/gallery" },
-        { icon: "alternate_email", label: "Contact", to: "/contact" },
-      ],
+        { icon: "group", label: "Practice", to: "/intranet/practice" },
+        { icon: "store", label: "Shop", to: "/intranet/shop" },
+        { icon: "dollars", label: "Members", to: "/intranet/members" },
+        { icon: "calendar", label: "Calendar", to: "/intranet/calendar" },
+        { icon: "committees", label: "Committees", to: "/intranet/committees" }
+      ]
     };
   },
   watch: {
     lang(lang) {
       this.$i18n.locale = lang;
-    },
-  },
+    }
+  }
 });
 </script>

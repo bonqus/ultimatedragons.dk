@@ -1,9 +1,15 @@
 <template>
-  <q-page class="row bg-black text-white ">
+  <q-page class="row bg-black text-white">
     <q-scroll-area class="q-px-md col">
       <div class="row">
         <div
-          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
+          class="
+            q-px-md q-pb-xl
+            offset-md-4
+            col-md-4
+            offset-sm-2
+            col-sm-8 col-xs
+          "
         >
           <!-- <h2 class="q-mb-md">{{ $t("Galleri") }}</h2> -->
 
@@ -47,16 +53,28 @@
   </q-page>
 </template>
 <script>
+import meta from "src/utils/meta.js";
 import InstaFeed from "components/InstaFeed.vue";
 export default {
-  name: "ContactPage",
+  name: "GalleryPage",
   components: {
-    InstaFeed
+    InstaFeed,
+  },
+  data() {
+    return {
+      metaTags: {
+        description: "Check out the newest photos of Ultimate Dragons",
+        title: "Ultimate Dragons | Gallery",
+        url: "ultimatedragons.dk/gallery",
+        img: "~assets/dragons-logo.png",
+      },
+    };
   },
   methods: {
-    followLink: function(link) {
+    followLink: function (link) {
       window.open(link, "_blank");
-    }
-  }
+    },
+  },
+  meta,
 };
 </script>

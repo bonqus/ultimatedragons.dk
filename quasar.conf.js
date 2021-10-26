@@ -7,8 +7,18 @@
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
 /* eslint-env node */
-const ESLintPlugin = require('eslint-webpack-plugin')
-const { configure } = require('quasar/wrappers');
+const path = require("path");
+
+const ESLintPlugin = require("eslint-webpack-plugin");
+const { configure } = require("quasar/wrappers");
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const paths = [
+  { path: '/' },
+  { path: '/practice' },
+  { path: '/shop' },
+  { path: '/contact' },
+  { path: '/gallery' }
+]
 
 module.exports = configure(function (ctx) {
   return {
@@ -37,11 +47,40 @@ module.exports = configure(function (ctx) {
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
       "roboto-font", // optional, you are not bound to it
-      "material-icons" // optional, you are not bound to it
+      "material-icons", // optional, you are not bound to it
     ],
 
     build: {
-      vueRouterMode: "hash", // available values: 'hash', 'history'
+      vueRouterMode: "history", // available values: 'hash', 'history'
+      // extendWebpack (cfg, {isServer, isClient}) {
+      // },
+
+      extendWebpack(cfg, { isServer, isClient }) {
+        // cfg.module.rules.push({
+        //   enforce: "pre",
+        //   test: /\.(js|vue)$/,
+        //   exclude: /(node_modules|quasar)/
+        // });
+
+        cfg.resolve.alias = {
+          ...cfg.resolve.alias, // This adds the existing alias
+          // Add your own alias like this
+          utils: path.resolve(__dirname, "./src/utils"),
+        };
+
+        cfg.plugins.push(
+          new SitemapPlugin({
+            base: 'https://ultimatedragons.dk',
+            paths,
+            options: {
+              filename: 'sitemap.xml',
+              lastmod: true,
+              changefreq: 'monthly',
+            }
+          })
+        )
+
+      },
 
       // transpile: false,
       // publicPath: '/',
@@ -62,9 +101,10 @@ module.exports = configure(function (ctx) {
 
       // https://quasar.dev/quasar-cli/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpack (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
+      chainWebpack(chain) {
+        chain
+          .plugin("eslint-webpack-plugin")
+          .use(ESLintPlugin, [{ extensions: ["js", "vue"] }]);
       },
     },
 
@@ -73,7 +113,7 @@ module.exports = configure(function (ctx) {
       https: false,
       port: 8080,
       open: true, // opens browser window automatically
-      host: "localhost.ultimatedragons.dk"
+      host: "localhost.ultimatedragons.dk",
     },
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
@@ -92,18 +132,16 @@ module.exports = configure(function (ctx) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ["Notify", "Dialog"],
+      plugins: ["Notify", "Dialog", "Meta"],
       config: {
         notify: {},
-        dark: true // auto/true/false
-      }
+        dark: true, // auto/true/false
+      },
     },
-
-
 
     // animations: 'all', // --- includes all animations
     // https://quasar.dev/options/animations
-   animations: [],
+    animations: [],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
@@ -112,20 +150,21 @@ module.exports = configure(function (ctx) {
       // manualPostHydrationTrigger: true,
 
       prodPort: 3000, // The default port that the production server should use
-                      // (gets superseded if process.env.PORT is specified at runtime)
+      // (gets superseded if process.env.PORT is specified at runtime)
 
       maxAge: 1000 * 60 * 60 * 24 * 30,
-        // Tell browser when a file from the server should expire from cache (in ms)
+      // Tell browser when a file from the server should expire from cache (in ms)
 
-      chainWebpackWebserver (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      chainWebpackWebserver(chain) {
+        chain
+          .plugin("eslint-webpack-plugin")
+          .use(ESLintPlugin, [{ extensions: ["js"] }]);
       },
 
       middlewares: [
-        ctx.prod ? 'compression' : '',
-        'render' // keep this as last one
-      ]
+        ctx.prod ? "compression" : "",
+        "render", // keep this as last one
+      ],
     },
 
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
@@ -135,15 +174,16 @@ module.exports = configure(function (ctx) {
 
       // for the custom service worker ONLY (/src-pwa/custom-service-worker.[js|ts])
       // if using workbox in InjectManifest mode
-      chainWebpackCustomSW (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      chainWebpackCustomSW(chain) {
+        chain
+          .plugin("eslint-webpack-plugin")
+          .use(ESLintPlugin, [{ extensions: ["js"] }]);
       },
 
       manifest: {
-        name: "Ultimate Dragons",
+        name: "Ultimate Dragons - Ultimate Frisbee Club",
         short_name: "Ultimate Dragons",
-        description: "The Dragons' Den",
+        description: "Ultimate frisbee in the heart of Copenhagen.",
         display: "standalone",
         orientation: "portrait",
         background_color: "#ffffff",
@@ -152,30 +192,30 @@ module.exports = configure(function (ctx) {
           {
             src: "statics/icons/icon-128x128.png",
             sizes: "128x128",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "statics/icons/icon-192x192.png",
             sizes: "192x192",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "statics/icons/icon-256x256.png",
             sizes: "256x256",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "statics/icons/icon-384x384.png",
             sizes: "384x384",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "statics/icons/icon-512x512.png",
             sizes: "512x512",
-            type: "image/png"
-          }
-        ]
-      }
+            type: "image/png",
+          },
+        ],
+      },
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-cordova-apps/configuring-cordova
@@ -185,7 +225,7 @@ module.exports = configure(function (ctx) {
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-capacitor-apps/configuring-capacitor
     capacitor: {
-      hideSplashscreen: true
+      hideSplashscreen: true,
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-electron-apps/configuring-electron
@@ -206,20 +246,22 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: "ultimatedragons.dk"
+        appId: "ultimatedragons.dk",
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpackMain (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      chainWebpackMain(chain) {
+        chain
+          .plugin("eslint-webpack-plugin")
+          .use(ESLintPlugin, [{ extensions: ["js"] }]);
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      chainWebpackPreload (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: [ 'js' ] }])
+      chainWebpackPreload(chain) {
+        chain
+          .plugin("eslint-webpack-plugin")
+          .use(ESLintPlugin, [{ extensions: ["js"] }]);
       },
-    }
+    },
   };
 });

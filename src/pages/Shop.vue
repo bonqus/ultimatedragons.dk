@@ -1,9 +1,15 @@
 <template>
-  <q-page class="row bg-black text-white ">
+  <q-page class="row bg-black text-white">
     <q-scroll-area class="q-px-md col">
       <div class="row">
         <div
-          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
+          class="
+            q-px-md q-pb-xl
+            offset-md-4
+            col-md-4
+            offset-sm-2
+            col-sm-8 col-xs
+          "
         >
           <h2 class="q-mb-md">{{ $t("Membership") }}</h2>
           <q-markup-table flat bordered separator="none">
@@ -123,8 +129,8 @@
       </div>
     </q-scroll-area>
     <q-dialog v-model="disc_dialog">
-      <q-card style="max-width: 600px; width: 100%" >
-        <q-img :src="disc.src"/>
+      <q-card style="max-width: 600px; width: 100%">
+        <q-img :src="disc.src" />
         <q-card-actions align="right">
           <q-btn flat :label="$t('OK')" v-close-popup />
         </q-card-actions>
@@ -134,9 +140,10 @@
 </template>
 
 <script>
+import meta from "src/utils/meta.js";
 import { copyToClipboard } from "quasar";
 export default {
-  name: "PageShop",
+  name: "ShopPage",
   data() {
     return {
       account_number: 4387858569,
@@ -146,9 +153,15 @@ export default {
         { label: "Black", src: require("assets/discs/black.png") },
         { label: "Grey", src: require("assets/discs/grey.png") },
         { label: "Red", src: require("assets/discs/red.png") },
-        { label: "Yellow", src: require("assets/discs/yellow.png") }
+        { label: "Yellow", src: require("assets/discs/yellow.png") },
       ],
-      disc: null
+      disc: null,
+      metaTags: {
+        description: "Buy an Ultimate Dragons membership, disc or uniform.",
+        title: "Ultimate Dragons | Shop",
+        url: "ultimatedragons.dk/shop",
+        img: "~assets/dragons-logo.png",
+      },
     };
   },
   methods: {
@@ -162,9 +175,10 @@ export default {
           this.$q.notify(this.$t(text) + " " + this.$t("copied_to_clipboard"));
         })
         .catch(() => {
-          console.log("nope");
+          console.log("Well that didn't work");
         });
-    }
-  }
+    },
+  },
+  meta,
 };
 </script>

@@ -1,9 +1,15 @@
 <template>
-  <q-page class="row bg-black text-white ">
+  <q-page class="row bg-black text-white">
     <q-scroll-area class="q-px-md col">
       <div class="row">
         <div
-          class="q-px-md q-pb-xl offset-md-4 col-md-4 offset-sm-2 col-sm-8 col-xs"
+          class="
+            q-px-md q-pb-xl
+            offset-md-4
+            col-md-4
+            offset-sm-2
+            col-sm-8 col-xs
+          "
         >
           <h2 class="q-mb-md">{{ $t("Board of Directors") }}</h2>
           <q-markup-table flat bordered separator="none">
@@ -42,6 +48,8 @@
   </q-page>
 </template>
 <script>
+import meta from "src/utils/meta.js";
+
 export default {
   name: "ContactPage",
   data() {
@@ -50,75 +58,50 @@ export default {
         {
           name: "Benjamin Toppenberg Lazar",
           role: "Chairman",
-          email: "ultimatedragonsdenmark+chairman@gmail.com"
+          email: "ultimatedragonsdenmark+chairman@gmail.com",
         },
         {
           name: "Ditte Schønnemann Jørgensen",
           role: "Vice Chairman",
-          email: "ultimatedragonsdenmark+vicechairman@gmail.com"
+          email: "ultimatedragonsdenmark+vicechairman@gmail.com",
         },
         {
           name: "Mathias Bohn Rassmusen",
           role: "Treasurer",
-          email: "ultimatedragonsdenmark+treasurer@gmail.com"
+          email: "ultimatedragonsdenmark+treasurer@gmail.com",
         },
         {
           name: "Laura Toppenberg Lazar",
           role: "Board Member",
-          email: "ultimatedragonsdenmark@gmail.com"
+          email: "ultimatedragonsdenmark@gmail.com",
         },
         {
           name: "Anita Pedersen",
           role: "Board Member",
-          email: "ultimatedragonsdenmark@gmail.com"
+          email: "ultimatedragonsdenmark@gmail.com",
         },
         {
           name: "Jonathan Ortved Melcher",
           role: "Alternate",
-          email: "ultimatedragonsdenmark@gmail.com"
-        }
-      ]
+          email: "ultimatedragonsdenmark@gmail.com",
+        },
+      ],
+      metaTags: {
+        description: "Contact Ultimate Dragons",
+        title: "Ultimate Dragons | Contact",
+        url: "ultimatedragons.dk/dashboard",
+        img: "~assets/dragons-logo.png",
+      },
     };
   },
   methods: {
     contact(member) {
       this.$q.dialog({
         title: member.name,
-        message: member.email
+        message: member.email,
       });
     },
-    sendStuff() {
-      // send a POST request
-      const GOOGLE_FORM_NAME_ID = "entry.717164993";
-      const GOOGLE_FORM_AGE_ID = "entry.452129453";
-      const GOOGLE_FORM_SEX_ID = "entry.1999305236";
-      const CORS_PROXY = "https://cors-escape.herokuapp.com/";
-
-      const GOOGLE_FORM_ACTION_URL =
-        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdEyndlFX_uqiIzDk4cu-24a0VU22evl8DHR4Xmt5e4mYYLcA/formResponse";
-
-      // this.$axios({
-      //   method: "post",
-      //   url: CORS_PROXY + GOOGLE_FORM_ACTION_URL,
-      //   data: {
-      //     [GOOGLE_FORM_NAME_ID]: "lkol",
-      //     [GOOGLE_FORM_AGE_ID]: "9",
-      //     [GOOGLE_FORM_SEX_ID]: "hej"
-      //   }
-      // })
-      //   .then(() => {
-      //     console.log("BRO");
-      //   })
-      //   .catch(error => {
-      //     console.log("whatever");
-      //   });
-      const formData = new FormData();
-      formData.append(GOOGLE_FORM_NAME_ID, "lkol");
-      formData.append(GOOGLE_FORM_AGE_ID, "9");
-      formData.append(GOOGLE_FORM_SEX_ID, "hej");
-
-      this.$axios.post(GOOGLE_FORM_ACTION_URL, formData);
-    }
-  }
+  },
+  meta,
 };
 </script>

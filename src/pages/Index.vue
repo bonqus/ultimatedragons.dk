@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh Lpr lff" class="bg-grey-1">
     <q-page-container>
-      <q-page class="row flex-center bg-black ">
+      <q-page class="row flex-center bg-black">
         <!-- <div style="position: fixed; z-index: 0; width: 100%; height: 100%">
              <iframe frameborder="0" height="100%" width="100%"
              src="https://www.youtube.com/embed/XGnnYiwK4Dw?rel=0;&autoplay=1;&controls=0;&showinfo=0;&autohide=1;&loop=1;"
@@ -10,7 +10,12 @@
              </iframe>
              </div> -->
         <div
-          class="col-xs-11 col-sm-8 col-md-5 col-lg-4 column flex-center text-center"
+          class="
+            col-xs-11 col-sm-8 col-md-5 col-lg-4
+            column
+            flex-center
+            text-center
+          "
         >
           <h1 class="text-grey">
             {{ $t("Ultimate frisbee in the heart of Copenhagen") }}
@@ -51,18 +56,30 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
+import meta from "src/utils/meta.js";
 
-  import { useQuasar } from 'quasar'
+import { useQuasar } from "quasar";
 
 export default defineComponent({
-  name: "PageIndex",
+  name: "IndexPage",
 
-    beforeCreate() {
-      const $q = useQuasar()
-      const locale = $q.lang.getLocale() // returns a string
-      if (locale.split('-')[0] !== 'da')
-        this.$i18n.locale = "en-US";
-    },
+  beforeCreate() {
+    const $q = useQuasar();
+    const locale = $q.lang.getLocale(); // returns a string
+    if (locale.split("-")[0] !== "da") this.$i18n.locale = "en-US";
+  },
+
+  data() {
+    return {
+      metaTags: {
+        description: "Ultimate frisbee in the heart of Copenhagen",
+        title: "Ultimate Dragons",
+        url: "ultimatedragons.dk/",
+        img: "~assets/dragons-logo.png",
+      },
+    };
+  },
+  meta,
 });
 </script>

@@ -10,7 +10,7 @@
     "test": "echo \"No test specified\" && exit 0",
     "deploy": "push-dir --dir=dist/spa --remote=origin --branch=master",
     "dev": "quasar dev",
-    "build": "quasar build  && cp CNAME dist/spa &&  cp dist/spa/index.html dist/spa/404.html"
+    "build": "quasar build && cp robots.txt dist/spa && cp CNAME dist/spa &&  cp dist/spa/index.html dist/spa/404.html"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -21,13 +21,14 @@
     "vuex": "^4.0.1"
   },
   "devDependencies": {
-    "push-dir": "^0.4.1",
     "@babel/eslint-parser": "^7.13.14",
     "@quasar/app": "^3.0.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^7.0.0",
-    "eslint-webpack-plugin": "^2.4.0"
+    "eslint-webpack-plugin": "^2.4.0",
+    "push-dir": "^0.4.1",
+    "sitemap-webpack-plugin": "^1.1.1"
   },
   "browserslist": [
     "last 10 Chrome versions",

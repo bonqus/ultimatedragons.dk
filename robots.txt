@@ -1,0 +1,3 @@
+User-agent: *
+Allow: All
+Sitemap: https://ultimatedragons.dk/sitemap.xml
