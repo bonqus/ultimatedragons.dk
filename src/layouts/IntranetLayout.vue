@@ -72,11 +72,11 @@ export default defineComponent({
         { value: "da-DK", label: "🇩🇰 Dansk" }
       ],
       links: [
-        { icon: "group", label: "Practice", to: "/intranet/practice" },
+        { icon: "sports", label: "Practice", to: "/intranet/practice" },
         { icon: "store", label: "Shop", to: "/intranet/shop" },
-        { icon: "dollars", label: "Members", to: "/intranet/members" },
-        { icon: "calendar", label: "Calendar", to: "/intranet/calendar" },
-        { icon: "committees", label: "Committees", to: "/intranet/committees" }
+        { icon: "favorite", label: "Members", to: "/intranet/members" },
+        { icon: "event", label: "Calendar", to: "/intranet/calendar" },
+        { icon: "group", label: "Committees", to: "/intranet/committees" }
       ]
     };
   },

@@ -72,7 +72,7 @@ export default defineComponent({
         { value: "da-DK", label: "🇩🇰 Dansk" },
       ],
       links: [
-        { icon: "group", label: "Practice", to: "/practice" },
+        { icon: "sports", label: "Practice", to: "/practice" },
         { icon: "store", label: "Shop", to: "/shop" },
         { icon: "collections", label: "Gallery", to: "/gallery" },
         { icon: "alternate_email", label: "Contact", to: "/contact" },

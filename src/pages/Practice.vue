@@ -1,10 +1,10 @@
 <template>
   <page>
-    <h2 class="q-mb-none row justify-between">
-      {{ $t(season) }} {{ $t("season") }}
+    <h2 class="q-mb-none">{{ $t(season) }} {{ $t("season") }}</h2>
+    <h6 class="q-mt-none row items-center justify-between">
+      {{ dateInterval }}
       <q-btn @click="toggleSeason()" round :icon="seasonIcon" />
-    </h2>
-    <h6 class="q-mt-none">{{ dateInterval }}</h6>
+    </h6>
 
     <h2 class="q-mb-md">{{ $t("Open") }}</h2>
     <q-markup-table flat bordered separator="none" class="cursor-pointer">

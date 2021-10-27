@@ -10,14 +10,14 @@
     <!-- Skal bestyrelsesmøder være en del af kalenderen? muligvis med links til referat ? -->
     <!-- Create a timeline instead of table ? -->
 
-    <h2 class="q-mb-md">{{ $t("Reoccurring events") }}</h2>
+    <h2 class="q-mb-md">{{ $t("Reoccurring events") }}  </h2>
+    <h6 class="text-center q-mb-sm">🚧 Comming soon 🚧</h6>
     <q-markup-table flat bordered separator="none">
       <tbody>
         <tr v-for="(item, index) in events" :key="index">
           <td class="text-left">{{ item.emoji }}</td>
           <td class="text-left">{{ item.name }}</td>
           <td class="text-left">{{ item.occurence }}</td>
-          <td class="text-left">{{ item.next }}</td>
         </tr>
       </tbody>
     </q-markup-table>
