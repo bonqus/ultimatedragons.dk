@@ -13,10 +13,12 @@
           >
             <q-card class="bg-grey-9">
               <q-card-section>
+                <div class="text-subtitle2">{{ $t("Lead") }}</div>
+                {{ item.lead }}
+              </q-card-section>
+              <q-card-section v-if="item.members.length">
                 <div class="text-subtitle2">{{ $t("Members") }}</div>
-                <span v-for="(member, index) in item.members" :key="index">
-                  {{ member }}
-                </span>
+                  {{ item.members.join(', ') }}
               </q-card-section>
               <q-card-section>
                 <div class="text-subtitle2">{{ $t("Tasks") }}</div>
@@ -40,43 +42,49 @@ export default {
           default: true,
           icon: "🥳",
           name: "Social",
-          members: ["Ditte"],
+          lead: "Ditte",
+          members: ["Christine", "Anders", "Jonas", "Ålen", "Eiby"],
           text: "Vi står for at arrangere sociale aktiviteter i klubben! Både ad hoc ideer og de store årlige fester 🔥",
         },
         {
           default: false,
           icon: "🥏",
           name: "Træner",
-          members: ["Benjamin"],
-          text: "Træning",
+          lead: "Benjamin",
+          members: ["Laura", "Mathias", "Ålen"],
+          text: "Træning, udstyr, opvarming, FB begivenheder.",
         },
         {
           default: false,
           icon: "🏆",
-          name: "Turnerings",
-          members: ["Søren"],
-          text: "DM runder",
+          name: "Turnering",
+          lead: "Jonathan",
+          members: ["Søren", "Maria"],
+          text: "DM runder, tilmelding, låne spillertøj, kørselsark opslag i den forbindelse. Turneringer, finde og søge, informér Dragons (Begivenhed)",
         },
         {
           default: false,
           icon: "✨",
           name: "SoMe",
-          members: ["Laura", "Rikke", "Thomas", "Mathilde"],
+          lead: "Laura",
+          members: ["Rikke", "Ryde", "Mathilde"],
           text: "Vi er Dragons udadtil 🧚‍♂️ Vi laver posts fra træningskampe, sociale arrangementer, turneringer og hvad end vi synes kan tiltrække flere til klubben 🐣",
         },
         {
           default: false,
           icon: "🚧",
           name: "Klubudvikling",
-          members: ["Anita"],
-          text: "Hvordan får vi nye medlemmer?",
+          lead: "Anita",
+          members: ["Mette", "Siggy"],
+          text: "Begynder træninger, find træner, opret begivenhed, nye initiativer til promovering af klubben",
         },
         {
           default: false,
           icon: "👕",
           name: "Merchandise",
-          members: ["Mathias"],
-          text: "Ultimate Dragons Design DNA",
+          lead: "Mathias",
+          members: [],
+          text: "Design og bestilling af merch, i.e. spillertøj, disc osv.",
         },
       ],
     };

@@ -68,5 +68,6 @@ export default {
   Calendar: "Kalender",
   Tasks: "Opgaver",
   All: "Alle",
-  "Reoccurring events": "Tilbagevendende begivenheder"
+  "Reoccurring events": "Tilbagevendende begivenheder",
+  Lead: "Ansvarlig"
 };

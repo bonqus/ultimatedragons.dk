@@ -68,5 +68,6 @@ export default {
   Calendar: "Calendar",
   Tasks: "Tasks",
   All: "All",
-  "Reoccurring events": "Reoccurring events"
+  "Reoccurring events": "Reoccurring events",
+  Lead: "Lead"
 };
