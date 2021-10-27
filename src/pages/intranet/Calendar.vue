@@ -10,7 +10,7 @@
     <!-- Skal bestyrelsesmøder være en del af kalenderen? muligvis med links til referat ? -->
     <!-- Create a timeline instead of table ? -->
 
-    <h2 class="q-mb-md">{{ $t("Reoccurring events") }}  </h2>
+    <h2 class="q-mb-md">{{ $t("Reoccurring events") }}</h2>
     <h6 class="text-center q-mb-sm">🚧 Comming soon 🚧</h6>
     <q-markup-table flat bordered separator="none">
       <tbody>
@@ -107,6 +107,25 @@ export default {
           emoji: "🥳",
           name: "Christmas Party",
           occurence: "2nd Saturday in December",
+          next: "",
+        },
+        {
+          emoji: "🥳",
+          name: "Samepillermøde",
+          occurence: "I slutningen af sæsnonen.",
+          next: "",
+        },
+        {
+          emoji: "🥳",
+          name: "Herrespillermøde",
+          occurence: "I slutningen af sæsnonen.",
+          next: "",
+        },
+        {
+          emoji: "🥳",
+          name: "Bestyrelsesmøde",
+          occurence:
+            "I slutningen af sæsnonen, en dato bliver sat ved afslutningen af hvert bestyrelsesmøde",
           next: "",
         },
       ],

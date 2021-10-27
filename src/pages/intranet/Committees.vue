@@ -1,7 +1,7 @@
 <template>
   <page>
     <h2 class="q-mb-md">{{ $t("Committees") }}</h2>
-
+    <!-- should be hooked up to google sheets -->
     <q-markup-table flat bordered separator="none">
       <tbody>
         <tr v-for="(item, index) in events" :key="index">
