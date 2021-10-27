@@ -13,16 +13,16 @@
     "build": "quasar build && cp robots.txt dist/spa && cp CNAME dist/spa &&  cp dist/spa/index.html dist/spa/404.html"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
+    "@quasar/extras": "^1.11.3",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "quasar": "^2.0.0",
+    "quasar": "^2.2.1",
     "vue-i18n": "^9.0.0",
     "vuex": "^4.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
-    "@quasar/app": "^3.0.0",
+    "@quasar/app": "^3.1.7",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^7.0.0",
