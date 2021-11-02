@@ -55,7 +55,7 @@ const metaTags = {
   description: "Check out the newest photos of Ultimate Dragons",
   title: "Ultimate Dragons | Gallery",
   url: "https://ultimatedragons.dk/gallery",
-  img: "https://ultimatedragons.dk/dragons.png",
+  img: require("assets/dragons-logo.png"),
 };
 export default {
   name: "GalleryPage",

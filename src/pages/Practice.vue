@@ -169,7 +169,7 @@ const metaTags = {
   description: "Practice time and place.",
   title: "Ultimate Dragons | Practice",
   url: "https://ultimatedragons.dk/practice",
-  img: "https://ultimatedragons.dk/dragons.png",
+  img: require("assets/dragons-logo.png"),
 };
 export default {
   name: "PracticePage",

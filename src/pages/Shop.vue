@@ -128,7 +128,7 @@ const metaTags = {
   description: "Buy an Ultimate Dragons membership, disc or uniform.",
   title: "Ultimate Dragons | Shop",
   url: "https://ultimatedragons.dk/shop",
-  img: "https://ultimatedragons.dk/dragons.png",
+  img: require("assets/dragons-logo.png"),
 };
 export default {
   name: "ShopPage",

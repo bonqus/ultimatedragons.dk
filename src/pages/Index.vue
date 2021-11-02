@@ -65,7 +65,7 @@ const metaTags = {
   description: "Ultimate frisbee in the heart of Copenhagen",
   title: "Ultimate Dragons",
   url: "https://ultimatedragons.dk/",
-  img: "https://ultimatedragons.dk/dragons.png",
+  img: require("assets/dragons-logo.png"),
 };
 
 export default defineComponent({

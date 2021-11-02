@@ -41,7 +41,7 @@ const metaTags = {
   description: "Contact Ultimate Dragons",
   title: "Ultimate Dragons | Contact",
   url: "https://ultimatedragons.dk/contact",
-  img: "https://ultimatedragons.dk/dragons.png",
+  img: require("assets/dragons-logo.png"),
 };
 export default {
   name: "ContactPage",
