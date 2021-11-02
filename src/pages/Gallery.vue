@@ -49,26 +49,26 @@
 <script>
 import meta from "src/utils/meta.js";
 import InstaFeed from "components/InstaFeed.vue";
+import { useMeta } from "quasar";
+
+const metaTags = {
+  description: "Check out the newest photos of Ultimate Dragons",
+  title: "Ultimate Dragons | Gallery",
+  url: "https://ultimatedragons.dk/gallery",
+  img: "https://ultimatedragons.dk/dragons.png",
+};
 export default {
   name: "GalleryPage",
+  setup() {
+    useMeta(meta(metaTags));
+  },
   components: {
     InstaFeed,
-  },
-  data() {
-    return {
-      metaTags: {
-        description: "Check out the newest photos of Ultimate Dragons",
-        title: "Ultimate Dragons | Gallery",
-        url: "ultimatedragons.dk/gallery",
-        img: "~assets/dragons-logo.png",
-      },
-    };
   },
   methods: {
     followLink: function (link) {
       window.open(link, "_blank");
     },
   },
-  meta,
 };
 </script>

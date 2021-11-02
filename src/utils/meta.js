@@ -1,47 +1,43 @@
-export default function meta() {
+export default function meta(metaTags) {
   const metaObj = { meta: {} };
-  if (!this.metaTags) {
+  if (!metaTags) {
     return metaObj;
   }
-  if (this.metaTags.title) {
-    console.log("adding title");
-    metaObj.title = this.metaTags.title;
-    metaObj.meta.ogTitle = { name: "og:title", content: this.metaTags.title };
+  if (metaTags.title) {
+    metaObj.title = metaTags.title;
+    metaObj.meta.ogTitle = { name: "og:title", content: metaTags.title };
     metaObj.meta.twitterTitle = {
       name: "twitter:title",
-      content: this.metaTags.title,
+      content: metaTags.title,
     };
   }
-  if (this.metaTags.description) {
-    console.log("adding desc");
+  if (metaTags.description) {
     metaObj.meta.description = {
       name: "description",
-      content: this.metaTags.description,
+      content: metaTags.description,
     };
     metaObj.meta.ogDescription = {
       name: "og:description",
-      content: this.metaTags.description,
+      content: metaTags.description,
     };
     metaObj.meta.twitterDescription = {
       name: "twitter:description",
-      content: this.metaTags.description,
+      content: metaTags.description,
     };
   }
-  if (this.metaTags.url) {
-    console.log("adding url");
-    metaObj.meta.ogUrl = { name: "og:url", content: this.metaTags.url };
+  if (metaTags.url) {
+    metaObj.meta.ogUrl = { name: "og:url", content: metaTags.url };
     metaObj.meta.twitterUrl = {
       name: "twitter:url",
-      content: this.metaTags.url,
+      content: metaTags.url,
     };
-    metaObj.meta.canonical = { rel: "canonical", href: this.metaTags.url };
+    metaObj.meta.canonical = { rel: "canonical", href: metaTags.url };
   }
-  if (this.metaTags.image) {
-    console.log("adding image");
-    metaObj.meta.ogImage = { name: "og:image", content: this.metaTags.image };
+  if (metaTags.img) {
+    metaObj.meta.ogImage = { name: "og:image", content: metaTags.img };
     metaObj.meta.twitterImage = {
       name: "twitter:image",
-      content: this.metaTags.image,
+      content: metaTags.img,
     };
   }
   return metaObj;

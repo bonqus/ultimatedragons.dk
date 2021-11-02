@@ -58,6 +58,7 @@
 <script>
 import meta from "src/utils/meta.js";
 import MapDialog from "components/MapDialog.vue";
+import { useMeta } from "quasar";
 const maps = {
   Faelledparken: {
     src: "https://www.google.com/maps/embed/v1/place?q=55.700525%2C%2012.568412&key=AIzaSyANaCyizbUBRWXlKKzgpyinlHjG9a8T2gQ",
@@ -164,18 +165,21 @@ const practice = [
   },
 ];
 
+const metaTags = {
+  description: "Practice time and place.",
+  title: "Ultimate Dragons | Practice",
+  url: "https://ultimatedragons.dk/practice",
+  img: "https://ultimatedragons.dk/dragons.png",
+};
 export default {
   name: "PracticePage",
+  setup() {
+    useMeta(meta(metaTags));
+  },
   data() {
     return {
       map: { show: false, src: "" },
       season: this.currentSeason(),
-      metaTags: {
-        description: "Practice time and place.",
-        title: "Ultimate Dragons | Practice",
-        url: "ultimatedragons.dk/practice",
-        img: "~assets/dragons-logo.png",
-      },
     };
   },
   computed: {
@@ -223,7 +227,5 @@ export default {
   components: {
     MapDialog,
   },
-
-  meta,
 };
 </script>

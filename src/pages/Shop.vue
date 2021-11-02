@@ -123,9 +123,18 @@
 
 <script>
 import meta from "src/utils/meta.js";
-import { copyToClipboard } from "quasar";
+import { copyToClipboard, useMeta } from "quasar";
+const metaTags = {
+  description: "Buy an Ultimate Dragons membership, disc or uniform.",
+  title: "Ultimate Dragons | Shop",
+  url: "https://ultimatedragons.dk/shop",
+  img: "https://ultimatedragons.dk/dragons.png",
+};
 export default {
   name: "ShopPage",
+  setup() {
+    useMeta(meta(metaTags));
+  },
   data() {
     return {
       account_number: 4387858569,
@@ -138,12 +147,6 @@ export default {
         { label: "Yellow", src: require("assets/discs/yellow.png") },
       ],
       disc: null,
-      metaTags: {
-        description: "Buy an Ultimate Dragons membership, disc or uniform.",
-        title: "Ultimate Dragons | Shop",
-        url: "ultimatedragons.dk/shop",
-        img: "~assets/dragons-logo.png",
-      },
     };
   },
   methods: {
@@ -161,6 +164,5 @@ export default {
         });
     },
   },
-  meta,
 };
 </script>

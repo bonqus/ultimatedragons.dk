@@ -35,9 +35,19 @@
 </template>
 <script>
 import meta from "src/utils/meta.js";
+import { useMeta } from "quasar";
 
+const metaTags = {
+  description: "Contact Ultimate Dragons",
+  title: "Ultimate Dragons | Contact",
+  url: "https://ultimatedragons.dk/contact",
+  img: "https://ultimatedragons.dk/dragons.png",
+};
 export default {
   name: "ContactPage",
+  setup() {
+    useMeta(meta(metaTags));
+  },
   data() {
     return {
       boardMembers: [
@@ -72,12 +82,6 @@ export default {
           email: "ultimatedragonsdenmark@gmail.com",
         },
       ],
-      metaTags: {
-        description: "Contact Ultimate Dragons",
-        title: "Ultimate Dragons | Contact",
-        url: "ultimatedragons.dk/dashboard",
-        img: "~assets/dragons-logo.png",
-      },
     };
   },
   methods: {
@@ -88,6 +92,5 @@ export default {
       });
     },
   },
-  meta,
 };
 </script>

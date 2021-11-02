@@ -59,27 +59,24 @@
 import { defineComponent } from "vue";
 import meta from "src/utils/meta.js";
 
-import { useQuasar } from "quasar";
+import { useQuasar, useMeta } from "quasar";
+
+const metaTags = {
+  description: "Ultimate frisbee in the heart of Copenhagen",
+  title: "Ultimate Dragons",
+  url: "https://ultimatedragons.dk/",
+  img: "https://ultimatedragons.dk/dragons.png",
+};
 
 export default defineComponent({
   name: "IndexPage",
-
+  setup() {
+    useMeta(meta(metaTags));
+  },
   beforeCreate() {
     const $q = useQuasar();
     const locale = $q.lang.getLocale(); // returns a string
     if (locale.split("-")[0] !== "da") this.$i18n.locale = "en-US";
   },
-
-  data() {
-    return {
-      metaTags: {
-        description: "Ultimate frisbee in the heart of Copenhagen",
-        title: "Ultimate Dragons",
-        url: "ultimatedragons.dk/",
-        img: "~assets/dragons-logo.png",
-      },
-    };
-  },
-  meta,
 });
 </script>
