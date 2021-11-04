@@ -1,7 +1,7 @@
 <template>
   <page>
     <h2 class="q-mb-md">{{ $t("Board of Directors") }}</h2>
-    <q-markup-table flat bordered separator="none">
+    <q-markup-table flat bordered separator="none" class="cursor-pointer">
       <tbody>
         <tr
           v-for="member in boardMembers"
