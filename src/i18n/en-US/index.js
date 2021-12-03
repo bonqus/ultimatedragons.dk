@@ -69,5 +69,6 @@ export default {
   Tasks: "Tasks",
   All: "All",
   "Reoccurring events": "Reoccurring events",
-  Lead: "Lead"
+  Lead: "Lead",
+  NewMembersText: "If you are interested in training and playing with us, please contact us on either email or via facebook."
 };

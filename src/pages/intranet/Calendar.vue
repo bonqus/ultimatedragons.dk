@@ -21,6 +21,7 @@
         </tr>
       </tbody>
     </q-markup-table>
+    <!-- https://stackoverflow.com/questions/5831877/how-do-i-create-a-link-to-add-an-entry-to-a-calendar -->
 
     <!-- <q-timeline :layout="layout" color="secondary">
          <q-timeline-entry heading>

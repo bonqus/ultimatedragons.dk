@@ -1,5 +1,16 @@
 <template>
   <page>
+    <h2 class="q-mb-md">{{ $t("New Members") }}</h2>
+
+    <q-markup-table flat bordered separator="none" class="cursor-pointer">
+      <tbody>
+        <tr>
+          <td>
+            {{ $t("NewMembersText") }}
+          </td>
+        </tr>
+      </tbody>
+    </q-markup-table>
     <h2 class="q-mb-md">{{ $t("Board of Directors") }}</h2>
     <q-markup-table flat bordered separator="none" class="cursor-pointer">
       <tbody>
@@ -50,6 +61,13 @@ export default {
   },
   data() {
     return {
+      coaches: [
+        {
+          name: "Benjamin Toppenberg Lazar",
+          role: "Head coach",
+          email: "ultimatedragonsdenmark+head_coach@gmail.com",
+        },
+      ],
       boardMembers: [
         {
           name: "Benjamin Toppenberg Lazar",

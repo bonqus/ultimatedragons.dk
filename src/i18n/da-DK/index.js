@@ -69,5 +69,6 @@ export default {
   Tasks: "Opgaver",
   All: "Alle",
   "Reoccurring events": "Tilbagevendende begivenheder",
-  Lead: "Ansvarlig"
+  Lead: "Ansvarlig",
+  NewMembersText: "Hvis du er interesseret i at træne med os, kan du kontakte os via email eller facebook."
 };

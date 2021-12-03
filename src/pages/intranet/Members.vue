@@ -38,6 +38,7 @@ export default {
       members: [
         { name: "Anders Hvidkjær", sex: "Mand" },
         { name: "Anders Kyvsgaard Budolfsen", sex: "Mand" },
+        { name: "Arianne Brooks", sex: "Kvinde"},
         { name: "Benjamin Toppenberg Lazar", sex: "Mand" },
         { name: "Ditte Schønnemann Jørgensen", sex: "Kvinde" },
         { name: "Jakob Eiby", sex: "Mand" },
@@ -46,6 +47,7 @@ export default {
         { name: "Kirsten Hell Knudsen", sex: "Kvinde" },
         { name: "Laura Toppenberg Lazar", sex: "Kvinde" },
         { name: "Mathias Bohn Rasmussen", sex: "Mand" },
+        { name: "Mathilde Sif Holm Jacobsen Eiby", sex: "Kvinde"},
         { name: "Mette Godiksen", sex: "Kvinde" },
         { name: "Nemo Bo Molbech", sex: "Mand" },
         { name: "Oliver Clemmensen", sex: "Mand" },
