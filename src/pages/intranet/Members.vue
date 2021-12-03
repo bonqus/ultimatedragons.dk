@@ -1,7 +1,7 @@
 <template>
   <page>
     <h2>2021-22 {{ $t("Members") }} {{ $t("Indoor") }}</h2>
-    {{ $t("Last Update") }}: 2021-10-14
+    {{ $t("Last Update") }}: 2021-12-03
     <q-btn-toggle
       v-model="sex"
       class="q-py-md"
