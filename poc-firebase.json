@@ -1,0 +1,40 @@
+{
+    "seasons": {
+        "I21/22": {
+            "start_year": "2021",
+            "outdoor": false,
+            "members": {
+                "0": true,
+                "1": true
+            }
+        },
+        "U22": {
+            "start_year": "2022",
+            "outdoor": true,
+            "members": {
+                "0": true,
+                "1": true
+            }
+        }
+    },
+    "users": {
+        "0": {
+            "first_name": "Mathias",
+            "last_name": "Bohn Rasmussen",
+            "birthdate": "1992-11-09",
+            "sex": 1,
+            "seasons": {
+                "I21/22": true
+            }
+        },
+        "1": {
+            "first_name": "Laura",
+            "last_name": "Lazar",
+            "birthdate": "1995-07-19",
+            "sex": 2,
+            "seasons": {
+                "I21/22": true
+            }
+        }
+    }
+}

@@ -70,5 +70,6 @@ export default {
   All: "Alle",
   "Reoccurring events": "Tilbagevendende begivenheder",
   Lead: "Ansvarlig",
-  NewMembersText: "Hvis du er interesseret i at træne med os, kan du kontakte os via email eller facebook."
+  NewMembersText: "Hvis du er interesseret i at træne med os, kan du kontakte os via email eller facebook.",
+  "New Member?": "Nyt Medlem?"
 };
