@@ -8,7 +8,7 @@ export default {
   Registration_number: "Registration number",
   Account_number: "Account number",
   copied_to_clipboard: "copied to clipboard",
-  Copy_to_clipholder: "Copy to clipholder",
+  Copy_to_clipholder: "Copy to clipboard",
   "Short Sleeve Jersey": "Short Sleeve Jersey",
   "Long Sleeve Jersey": "Long Sleeve Jersey",
   "Tanktop Jersey": "Tanktop Jersey",
