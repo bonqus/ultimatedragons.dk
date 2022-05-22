@@ -1,6 +1,6 @@
 <template>
   <page>
-    <h2>2021-22 {{ $t("Members") }} {{ $t("Indoor") }}</h2>
+    <h2>2022 {{ $t("Members") }} {{ $t("Outdoor") }}</h2>
     {{ $t("Last Update") }}: 2021-12-03
     <q-btn-toggle
       v-model="sex"
@@ -36,28 +36,16 @@ export default {
       search: "",
       sex: "all",
       members: [
-        { name: "Anders Hvidkjær", sex: "Mand" },
-        { name: "Anders Kyvsgaard Budolfsen", sex: "Mand" },
-        { name: "Arianne Brooks", sex: "Kvinde"},
-        { name: "Benjamin Toppenberg Lazar", sex: "Mand" },
-        { name: "Ditte Schønnemann Jørgensen", sex: "Kvinde" },
-        { name: "Jakob Eiby", sex: "Mand" },
-        { name: "Jonas Hagsholm Pedersen", sex: "Mand" },
-        { name: "Jonathan Ortved Melcher", sex: "Mand" },
-        { name: "Kirsten Hell Knudsen", sex: "Kvinde" },
-        { name: "Laura Toppenberg Lazar", sex: "Kvinde" },
-        { name: "Mathias Bohn Rasmussen", sex: "Mand" },
-        { name: "Mathilde Sif Holm Jacobsen Eiby", sex: "Kvinde"},
-        { name: "Mette Godiksen", sex: "Kvinde" },
-        { name: "Nemo Bo Molbech", sex: "Mand" },
-        { name: "Oliver Clemmensen", sex: "Mand" },
-        { name: "Oliver Elleholm Kristoffersen", sex: "Mand" },
-        { name: "Oskar Holm Møller", sex: "Mand" },
+        { name: "Alexandra Pickett Porrazzo", sex: "Kvinde" },
+        { name: "Anita Pedersen", sex: "Kvinde" },
+        { name: "Christine Albrechtsen", sex: "Kvinde" },
+        { name: "Esben Larsen Rasmussen", sex: "Mand" },
+        { name: "Lærke Marie Høgh Bünger", sex: "Kvinde" },
+        { name: "Mathilde Sif Holm Jacobsen Eiby", sex: "Kvinde" },
+        { name: "Peter Alexander Garnæs", sex: "Mand" },
         { name: "Rikke Brouw Hyldahl", sex: "Kvinde" },
-        { name: "Sophie Jelstrup", sex: "Kvinde" },
-        { name: "Thomas Robert Träff", sex: "Mand" },
-        { name: "Thomas Ryde ", sex: "Mand" },
-        { name: "Thomas Siggaard Andersen", sex: "Mand" },
+        { name: "Thomas Ryde", sex: "Mand" },
+        { name: "Yannick Elias Heiser", sex: "Mand" },
       ],
     };
   },
