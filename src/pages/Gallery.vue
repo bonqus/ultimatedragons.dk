@@ -3,7 +3,7 @@
     <!-- <h2 class="q-mb-md">{{ $t("Galleri") }}</h2> -->
 
     <insta-feed
-      token="IGQVJWRFRtcG9MbVhyQnUzX1F3MldIdTRhTDJaMGt3MU5QbmIta0Q2SGxpWm9CNEU4bnNGQXkwemEyWDJZAZA3lsaG9DWWpRNGZAWcklta1h5UDVsZAlFuUERZAclhJUGhCSzl5c3BUc19oVDBFeWcyaURSUQZDZD"
+      token="IGQVJYNldROUQyQ1NDTzJRbS1RbHRoeGNDUmdPTjVvSm5zNjQ4ZAXZAldVhrZAkxtSFVSeG95bEs1U3NSSHB1Q1JUazFVY2VBUUpFcW1VS29YM2phem1tcDQxMmkzd3J1cmZAaV05qYV9GTUVKNXdQVDM1MAZDZD"
       fields="media_url,media_type,caption,permalink"
       :mediatypes="['IMAGE']"
     >
