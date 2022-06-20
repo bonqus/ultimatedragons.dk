@@ -1,7 +1,7 @@
 <template>
   <page>
     <h2>2022 {{ $t("Members") }} {{ $t("Outdoor") }}</h2>
-    {{ $t("Last Update") }}: 2022-05-24
+    {{ $t("Last Update") }}: 2022-06-20
     <q-btn-toggle
       v-model="sex"
       class="q-py-md"
@@ -29,27 +29,15 @@
 </template>
 
 <script>
+import members from './members.json';
+
 export default {
   name: "MembershipPage",
   data() {
     return {
       search: "",
       sex: "all",
-      members: [
-        { name: "Alexandra Pickett Porrazzo", sex: "Kvinde" },
-        { name: "Anita Pedersen", sex: "Kvinde" },
-        { name: "Christine Albrechtsen", sex: "Kvinde" },
-        { name: "Esben Larsen Rasmussen", sex: "Mand" },
-        { name: "Jonathan Ortved Melcher", sex: "Mand" },
-        { name: "Laura Toppenberg Lazar", sex: "Kvinde" },
-        { name: "Lærke Marie Høgh Bünger", sex: "Kvinde" },
-        { name: "Mathilde Sif Holm Jacobsen Eiby", sex: "Kvinde" },
-        { name: "Peter Alexander Garnæs", sex: "Mand" },
-        { name: "Rikke Brouw Hyldahl", sex: "Kvinde" },
-        { name: "Thomas Ryde", sex: "Mand" },
-        { name: "Thomas Siggaard Andersen", sex: "Mand" },
-        { name: "Yannick Elias Heiser", sex: "Mand" },
-      ],
+      members,
     };
   },
   computed: {
